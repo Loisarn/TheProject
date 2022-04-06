@@ -1,4 +1,4 @@
-import $ from 'jquery';
+import $ from '/node_modules/jquery/src/jquery.js';
 
 export class BaseElement {
 
@@ -9,6 +9,7 @@ export class BaseElement {
     appendToElement(el) {
         this.createElement();
         el.append(this.element);
+        this.enableJS();
     }
 
     createElement() {
@@ -18,5 +19,9 @@ export class BaseElement {
 
     getElementString(){
         throw 'Please override getElementString() in BaseElement';
+    }
+
+    enableJS() {
+        componentHandler.upgradeElement(this.element[0]);
     }
 }

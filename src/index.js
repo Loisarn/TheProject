@@ -1,11 +1,35 @@
-import $ from '../node_modules/jquery/src/jquery.js';
-import Contact from './modules/Contact.js';
-//import {TitleBar} from './ui/title-bar.js';
-// import { BusinessPlan } from "./modules/businessplan";
+// import $ from '../node_modules/jquery/src/jquery.js';
+// import * as Contact from './Contact.js';
+// import * as BPlan from './Businessplan.js';
+// import {Button} from './ui/Buttons.js';
+import {showProject} from './Project.js';
+import {showBusiness} from './Businessplan.js';
+import {showContact} from './Contact.js';
 
-const primaryNav = document.querySelector('#navbarSupportedContent');
-const navToggle = document.querySelector('.navbar-toggler');
+export const main = document.getElementById('main');
+const projectButton = document.getElementById('project');
+projectButton.addEventListener('click', () => {
+    showProject();
+})
 
-navToggle.addEventListener('click', () => {
-    const visibility = primaryNav.getAttribute('data-visible')
-});
+const businessButton = document.getElementById('businessplan');
+businessButton.addEventListener('click', () => {
+    showBusiness();
+})
+
+const contactButton = document.getElementById('contact');
+contactButton.addEventListener('click', () => {
+    showContact();
+})
+
+// export class App extends ApplicationBase {
+
+//     constructor() {
+//         super('Floppy');
+        
+//         this.addRoute('Businessplan', null);
+//         this.addRoute('Project', null);
+//         this.addRoute('Contact', null);
+//     }
+// }
+

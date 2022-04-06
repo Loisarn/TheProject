@@ -36,4 +36,12 @@ body{
 .navbar[data-visible="true"] {
     transform: translateX(0%);
 }
-    
+
+.container {
+    text-align: center;
+    font-weight: 300;
+}
+
+#main {
+    text-align: center;
+}

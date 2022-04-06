@@ -20,28 +20,34 @@
     <header>
         <!-- NAVIGATIONSMENY  -->
      <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #c6c8ca;">
-            <a class="navbar-brand" href="index.html">Floppy</a>
+            <a class="navbar-brand" href="./index.html">Floppy</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-expanded="false" aria-controls="navbarSupportedContent" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
     
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto" data-visible="false">
+                <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="./modules/project.js">Projektidé <span class="sr-only"></span></a>
+                        <a class="nav-link" href="#" id="project">Projektidé <span class="sr-only"></span></a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="./modules/businessplan.js">Affärsplan <span class="sr-only"></span></a>
+                        <a class="nav-link" href="#" id="businessplan">Affärsplan <span class="sr-only"></span></a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="./index.html">Kontakt <span class="sr-only"></span></a>
+                        <a class="nav-link" href="#" id="contact">Kontakt <span class="sr-only"></span></a>
                     </li>
                 </ul>
             </div> 
         </nav>
     </header>
-
+    <br>
+    <main id="main">
+        <div class="container">
+           <h1>Louice Borg</h1>
+            <p><bold>Webbutvecklare .NET</bold></p>
+            <p>Moderna Webbapplikationer</p>
+            </div>
     <!-- AFFÄRSPLAN-->
 
     <div id="businessplan"></div>
@@ -54,12 +60,14 @@
     
     <div id="contact"></div>
 
+     </main>   
     <footer class=" footer bg-light text-lg-start mt-5" id="footer">
         <div class="text-center p-3 text-black">The Project
             <a href="/src/app.html">App</a>
             </div>
     </footer>
     <script type="module" src="index.js"></script>
+    <script type="module" src="./Contact.js"></script>
    
 </body>
 </html>
