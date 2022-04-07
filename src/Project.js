@@ -10,7 +10,8 @@ export function showProject() {
     eller om man har renoverat i huset. Man kan även spara sina kvitton och få kvitton till appen.
     <span>Floppy</span> handlar om att ha en bättre koll över lagningar/renoveringar och viktiga papper.
     </p>
-    <img src="./image/mindmap.jpg" alt="Mindmap" style="width:500px;height:600px;">
+    <img src="./image/mindmap.jpg" alt="Mindmap" style="width:400px;height:500px;">
+    <img src="./image/prototype.jpg" alt="Prototype" style="width:500px;height:400px;">
     </div>
     </div> `
 }
