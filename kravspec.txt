@@ -1,6 +1,6 @@
 Kravlista för källkodsprojektet
 
-[ ] Din inlämning på Canvas ska bestå av en PDF fil (rapport), rapporten ska innehålla namnet på uppgiften + ditt namn.	
+[x] Din inlämning på Canvas ska bestå av en PDF fil (rapport), rapporten ska innehålla namnet på uppgiften + ditt namn.	
 [ ] Bifoga i din rapport en länk där källkoden är tillgänglig, det ska gå att se och granska koden enligt övriga krav.
 [x] Ditt länkade källkodsprojekt ska om möjligt vara privat så att endast lärare (viktor) och du har tillgång till att se och ändra i projektet.
 

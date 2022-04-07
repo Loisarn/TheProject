@@ -1,14 +1,5 @@
 import {main} from './index.js';
 
-class Project {
-    constructor(title, text) {
-        
-        this.title = title;
-        this.text = text;
-    }
-}
-
-
 export function showProject() {
 
     //const mockUp  -bild
