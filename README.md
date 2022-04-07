@@ -11,7 +11,7 @@ Första inlämningen i Moderna Webbapplikationer handlar om att göra en sida d�
 
 ## Kravlista för källkodsprojektet
 
-- [x] Din inlämning på Canvas ska bestå av en PDF fil (rapport), rapporten ska innehålla namnet på uppgiften + ditt namn.	
+:heavy_check_mark: [x] Din inlämning på Canvas ska bestå av en PDF fil (rapport), rapporten ska innehålla namnet på uppgiften + ditt namn.	
 
 * [x] Bifoga i din rapport en länk där källkoden är tillgänglig, det ska gå att se och granska koden enligt övriga krav.
 
