@@ -1,6 +1,9 @@
 import {main} from './index.js';
 
 export function showBusiness() {
+
+    const file = './files/affärsplan_Floppy-2022.pdf';
+
     main.innerHTML = `
     <div><h1>Affärsplan</h1></div>
     <hr>
@@ -15,6 +18,8 @@ export function showBusiness() {
     Intressentanalys, som innehåller kärn, primär och sekundärintressenter och hur relevanta dessa är för appen. 
     Affärsplanen innehåller även en kommunikationsplan över hur man ska gå tillväga när det gäller att kommunicera med de olika inblandade i projektet. En lista med bemanning finns också att tillgå, då företaget består av tre personer som kommer att få igång och producera projektet.
     </p>
+    <a href="./files/affärsplan_Floppy-2022.pdf">Läs hela affärsplanen här</a>
+
     <hr>
     `
 }

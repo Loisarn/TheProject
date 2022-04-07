@@ -2,8 +2,6 @@ import {main} from './index.js';
 
 export function showProject() {
 
-    //const mockUp  -bild
-
     main.innerHTML = `
     <div><h1>Projektidé</h1></div>
     <div class="container">
@@ -12,6 +10,7 @@ export function showProject() {
     eller om man har renoverat i huset. Man kan även spara sina kvitton och få kvitton till appen.
     <span>Floppy</span> handlar om att ha en bättre koll över lagningar/renoveringar och viktiga papper.
     </p>
+    <img src="./image/mindmap.jpg" alt="Mindmap" style="width:500px;height:600px;">
     </div>
     </div> `
 }
