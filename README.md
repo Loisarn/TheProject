@@ -11,41 +11,41 @@ Första inlämningen i Moderna Webbapplikationer handlar om att göra en sida d�
 
 ## Kravlista för källkodsprojektet
 
-:heavy_check_mark: [x] Din inlämning på Canvas ska bestå av en PDF fil (rapport), rapporten ska innehålla namnet på uppgiften + ditt namn.	
+[:heavy_check_mark:] Din inlämning på Canvas ska bestå av en PDF fil (rapport), rapporten ska innehålla namnet på uppgiften + ditt namn.	
 
-* [x] Bifoga i din rapport en länk där källkoden är tillgänglig, det ska gå att se och granska koden enligt övriga krav.
+[:heavy_check_mark:] Bifoga i din rapport en länk där källkoden är tillgänglig, det ska gå att se och granska koden enligt övriga krav.
 
-* [x] Ditt länkade källkodsprojekt ska om möjligt vara privat så att endast lärare (viktor) och du har tillgång till att se och ändra i projektet.
+[:heavy_check_mark:] Ditt länkade källkodsprojekt ska om möjligt vara privat så att endast lärare (viktor) och du har tillgång till att se och ändra i projektet.
 
-* [x] I ditt källkodsprojekt ska två filer index.html samt app.html finnas tillgänglig.
+[:heavy_check_mark:] I ditt källkodsprojekt ska två filer index.html samt app.html finnas tillgänglig.
 
-* [x] Inga andra html filer får finnas i källkodsprojektet.
+[:heavy_check_mark:] Inga andra html filer får finnas i källkodsprojektet.
 
-* [x] Filen index.html ska innehålla alternativt länka till både CSS och Javascript kod i källkoden.
+[:heavy_check_mark:] Filen index.html ska innehålla alternativt länka till både CSS och Javascript kod i källkoden.
  
 
 När index.html visas i en webbläsare ska följande kunna hända...
 
-* [x] Innehållet ska vara indelad i en html-elementen: header, footer & main. Main ska kunna visa upp 3 olika "vyer" av innehåll via utförandet av JavaScript-kod.
+[:heavy_check_mark:] Innehållet ska vara indelad i en html-elementen: header, footer & main. Main ska kunna visa upp 3 olika "vyer" av innehåll via utförandet av JavaScript-kod.
 
-* [x] Det skall finnas en navigationsmeny i headern med tre stycken knappar. Vid klick på en knapp skall respektive "vy" i main-elementet visas. 
+[:heavy_check_mark:] Det skall finnas en navigationsmeny i headern med tre stycken knappar. Vid klick på en knapp skall respektive "vy" i main-elementet visas. 
 
-* [x] En av vyerna ska beskriva i korthet din affärsplan du skapade i kursen Affärsmannaskap för IT.
+[:heavy_check_mark:] En av vyerna ska beskriva i korthet din affärsplan du skapade i kursen Affärsmannaskap för IT.
 
-* [x] En annan sida ska i beskriva din projektidé - den prototyp du vill bygga i kursen.
+[:heavy_check_mark:] En annan sida ska i beskriva din projektidé - den prototyp du vill bygga i kursen.
 
-* [x] Den sista sidan ska ha valfritt innehåll, men gärna kopplat till din projektidé. Exempelvis dina kontaktuppgifter.
+[:heavy_check_mark:] Den sista sidan ska ha valfritt innehåll, men gärna kopplat till din projektidé. Exempelvis dina kontaktuppgifter.
 
-* [x] Från index.html ska man någonstans kunna följa en länk till filen app.html.
+[:heavy_check_mark:] Från index.html ska man någonstans kunna följa en länk till filen app.html.
 
-* [x] Då användaren hovrar över en av knapparna i navigationsmenyn skall den bli större. Detta skall göras via CSS.
+[:heavy_check_mark:] Då användaren hovrar över en av knapparna i navigationsmenyn skall den bli större. Detta skall göras via CSS.
 
-* [x] Koden för att rita ut de tre vyerna vara uppdelade i varsina (3 olika) JavaScript-moduler.
+[:heavy_check_mark:] Koden för att rita ut de tre vyerna vara uppdelade i varsina (3 olika) JavaScript-moduler.
  
 
 När app.html visas i en webbläsare ska följande hända...
 
-* [x] Från sidan ska texten "Hello World" skrivas ut. Detta kan hårdkodas, men sidan ska finnas.
+[:heavy_check_mark:] Från sidan ska texten "Hello World" skrivas ut. Detta kan hårdkodas, men sidan ska finnas.
  
 ## Kravlista för rapporten
 
