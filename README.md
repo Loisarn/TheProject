@@ -1,9 +1,9 @@
 # TheProject
 Inlämning 1, Moderna Webbapplikationer
 
-##Kravlista för källkodsprojektet
+## Kravlista för källkodsprojektet
 
-[x] Din inlämning på Canvas ska bestå av en PDF fil (rapport), rapporten ska innehålla namnet på uppgiften + ditt namn.	
+* [x] Din inlämning på Canvas ska bestå av en PDF fil (rapport), rapporten ska innehålla namnet på uppgiften + ditt namn.	
 
 [x] Bifoga i din rapport en länk där källkoden är tillgänglig, det ska gå att se och granska koden enligt övriga krav.
 
@@ -39,7 +39,7 @@ När app.html visas i en webbläsare ska följande hända...
 
 [x] Från sidan ska texten "Hello World" skrivas ut. Detta kan hårdkodas, men sidan ska finnas.
  
-##Kravlista för rapporten
+## Kravlista för rapporten
 
 [ ] Vilken är din valda metod och teknik för källkodshantering?
 
