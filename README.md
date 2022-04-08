@@ -49,8 +49,8 @@ När app.html visas i en webbläsare ska följande hända...
  
 ## Kravlista för rapporten
 
-[ ] Vilken är din valda metod och teknik för källkodshantering?
+[:heavy_check_mark:] Vilken är din valda metod och teknik för källkodshantering?
 
-[ ] Förklara och motivera hur du har valt att arbeta med din källkod under den fortsatta kursen. Var tydlig med att motivera valet av både teknik (git) och metod (hur du tänkt arbeta)
+[:heavy_check_mark:] Förklara och motivera hur du har valt att arbeta med din källkod under den fortsatta kursen. Var tydlig med att motivera valet av både teknik (git) och metod (hur du tänkt arbeta)
 
-[ ] Hur påverkar användningen av Javascript moduler kodens struktur?
+[:heavy_check_mark:] Hur påverkar användningen av Javascript moduler kodens struktur?
