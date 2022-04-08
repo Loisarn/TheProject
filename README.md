@@ -4,6 +4,8 @@ Inlämning 1, Moderna Webbapplikationer
 ## Project Description
 Första inlämningen i Moderna Webbapplikationer handlar om att göra en sida där man kan läsa om själva projektidén, kolla affärsplanen och en sida med kontaktinformation. Mitt projekt handlar om en app där man kan lägga till information om vad man har lagat på bilen eller till exempel vad man har renoverat i huset. En funktion för kvitton/viktiga papper ska också finnas.
 
+<img width="1180" alt="Skärmavbild 2022-04-07 kl  12 22 09" src="https://user-images.githubusercontent.com/89778044/162179946-ea6c33f8-676f-4832-8952-f513bb68bebb.png">
+
 ## Technologies used
 - Html
 - CSS
