@@ -2,10 +2,12 @@
   "name": "theproject",
   "version": "1.0.0",
   "description": "Inlämning 1, Moderna Webbapplikationer",
-  "main": "index.html",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "javascript": "index.js"
+    "javascript": "index.js",
+    "start": "index.html"
+  
   },
   "repository": {
     "type": "git",
@@ -21,9 +23,12 @@
     "bootstrap": "^5.1.3",
     "es6-module-loader": "^0.17.11",
     "jquery": "^3.6.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
     "traceur": "^0.0.111"
   },
   "devDependencies": {
-    "lite-server": "^2.6.1"
+    "lite-server": "^2.6.1",
+    "parcel-bundler": "^1.3.1"
   }
 }
