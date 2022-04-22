@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom/client';
 import  Navbar  from './navbar.jsx';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './app.css';
-import axios from 'axios';
 import Home from './pages/Hem.js';
 import Renovering from './pages/Renovering.js';
 import Kostnad from './pages/Kostnad.js';
