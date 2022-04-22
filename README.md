@@ -9,11 +9,17 @@ sedan skriver man cd src (så att man kommer in i rätt mapp) för att sedan skr
 (disclaimer: när jag installerade hade jag problem i package.json och var tvungen att ändra, om detta skulle hända andra så kommer här information om vad man kan behöva ändra):
 
   "name": "theproject",
+
   "version": "1.0.0",
+
   "description": "Inlämning 1, Moderna Webbapplikationer",
+
   "source":"src/app.html",  <-
+
   "scripts": {
+
     "start": "parcel", <-
+    
     "dev": "lite-server"
 
 ## Project Description
