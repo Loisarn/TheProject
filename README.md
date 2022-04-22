@@ -1,8 +1,23 @@
 # TheProject
 Inlämning 1, Moderna Webbapplikationer
 
+## How to use
+För att få programmet att fungera måste man installera node.js, om man inte redan har det installerat. För att sedan kunna köra programmet krävs det att man installerar parcel, react, react-router-dom och react-dom. 
+(exempel:  npm install --save-dev parcel, react, react-router-dom, react-dom ) 
+sedan skriver man cd src (så att man kommer in i rätt mapp) för att sedan skriva npm start.
+
+(disclaimer: när jag installerade hade jag problem i package.json och var tvungen att ändra, om detta skulle hända andra så kommer här information om vad man kan behöva ändra):
+
+  "name": "theproject",
+  "version": "1.0.0",
+  "description": "Inlämning 1, Moderna Webbapplikationer",
+  "source":"src/app.html",  <-
+  "scripts": {
+    "start": "parcel", <-
+    "dev": "lite-server"
+
 ## Project Description
-Första inlämningen i Moderna Webbapplikationer handlar om att göra en sida där man kan läsa om själva projektidén, kolla affärsplanen och en sida med kontaktinformation. Mitt projekt handlar om en app där man kan lägga till information om vad man har lagat på bilen eller till exempel vad man har renoverat i huset. En funktion för kvitton/viktiga papper ska också finnas.
+Andra inlämningen handlar om att bygga vidare på den första inlämningen. En första prototyp på idén som man har. Vi får även lära oss att använda Parcel för att kunna transpilera koden. Det är även en introduktion till React och vi får lära oss att koda komponenter, använda hooks och använda oss av JSX syntax.
 
 <img width="1180" alt="Skärmavbild 2022-04-07 kl  12 22 09" src="https://user-images.githubusercontent.com/89778044/162179946-ea6c33f8-676f-4832-8952-f513bb68bebb.png">
 
@@ -10,49 +25,40 @@ Första inlämningen i Moderna Webbapplikationer handlar om att göra en sida d�
 - Html
 - CSS
 - Javascript
+- Parcel
+- React
 
 ## Kravlista för källkodsprojektet
 
-[:heavy_check_mark:] Din inlämning på Canvas ska bestå av en PDF fil (rapport), rapporten ska innehålla namnet på uppgiften + ditt namn.	
+[:heavy_check_mark:] Ditt inlämnade git-repo är samma som i tidigare inlämningsuppgift.
 
-[:heavy_check_mark:] Bifoga i din rapport en länk där källkoden är tillgänglig, det ska gå att se och granska koden enligt övriga krav.
+[:heavy_check_mark:] Ditt inlämnade git-repo ska innehålla en readme.md fil som kort beskriver vad som behöver göras för att man ska kunna bygga och besöka applikationen via webbläsaren. Den givna beskrivningen ska vara utförlig och korrekt.
 
-[:heavy_check_mark:] Ditt länkade källkodsprojekt ska om möjligt vara privat så att endast lärare (viktor) och du har tillgång till att se och ändra i projektet.
+[:heavy_check_mark:] Ditt repo ska fortfarande innehålla index.html och app.html - index.html ska fungera likadant som i tidigare inlämningsuppgift när den besöks i webbläsaren.
 
-[:heavy_check_mark:] I ditt källkodsprojekt ska två filer index.html samt app.html finnas tillgänglig.
+[:heavy_check_mark:] Din källkod (javascript-filer, och ev. andra filer) ska kunna transpileras med ett byggsystem beskrivet i readme.md-filen.
 
-[:heavy_check_mark:] Inga andra html filer får finnas i källkodsprojektet.
+[:heavy_check_mark:] Endast lämpliga filer som inte kan genereras av byggsystemet, eller som kan installeras, ska vara versionshanterade.
 
-[:heavy_check_mark:] Filen index.html ska innehålla alternativt länka till både CSS och Javascript kod i källkoden.
- 
+## Kravlista för app.html
 
-När index.html visas i en webbläsare ska följande kunna hända...
+[:heavy_check_mark:] När app.html besöks i webbläsaren ska nu din första prototyp renderas med React
 
-[:heavy_check_mark:] Innehållet ska vara indelad i en html-elementen: header, footer & main. Main ska kunna visa upp 3 olika "vyer" av innehåll via utförandet av JavaScript-kod.
+[:heavy_check_mark:] React-trädet som renderas som ska bestå av minst 5st komponenter som du skrivit själv och som finns med i källkoden. (alla komponenter behöver inte renderas samtidigt)
 
-[:heavy_check_mark:] Det skall finnas en navigationsmeny i headern med tre stycken knappar. Vid klick på en knapp skall respektive "vy" i main-elementet visas. 
+[:heavy_check_mark:] Dina React komponenter är skrivna med JSX syntaxen. 
 
-[:heavy_check_mark:] En av vyerna ska beskriva i korthet din affärsplan du skapade i kursen Affärsmannaskap för IT.
+[ ] Minst två av dina komponenter ska hantera ett "event" i Javascript, exempelvis från användaren.
 
-[:heavy_check_mark:] En annan sida ska i beskriva din projektidé - den prototyp du vill bygga i kursen.
+[ ] Minst två av dina komponenter ska använda sig av state för att rendera tillståndsbaserad information. (i.e. "conditional rendering")
 
-[:heavy_check_mark:] Den sista sidan ska ha valfritt innehåll, men gärna kopplat till din projektidé. Exempelvis dina kontaktuppgifter.
+[ ] En av dina komponenter använder sig av en Lifecycle metod eller hook för att påverka en annan komponents tillstånd. Render räknas inte som en lifecycle metod.
 
-[:heavy_check_mark:] Från index.html ska man någonstans kunna följa en länk till filen app.html.
+[ ] Via en av komponenterna ska användaren kunna spara information i LocalStorage.
 
-[:heavy_check_mark:] Då användaren hovrar över en av knapparna i navigationsmenyn skall den bli större. Detta skall göras via CSS.
+[ ] Informationen i LocalStorage används vid renderingen av React-trädet.
 
-[:heavy_check_mark:] Koden för att rita ut de tre vyerna vara uppdelade i varsina (3 olika) JavaScript-moduler.
- 
+[:heavy_check_mark:] I app.html används egen css, eller ett bibliotek för att ge dina komponenter stil och form
+	
+[:heavy_check_mark:] I app.html används egen css för att ge dina komponenter rörelser
 
-När app.html visas i en webbläsare ska följande hända...
-
-[:heavy_check_mark:] Från sidan ska texten "Hello World" skrivas ut. Detta kan hårdkodas, men sidan ska finnas.
- 
-## Kravlista för rapporten
-
-[:heavy_check_mark:] Vilken är din valda metod och teknik för källkodshantering?
-
-[:heavy_check_mark:] Förklara och motivera hur du har valt att arbeta med din källkod under den fortsatta kursen. Var tydlig med att motivera valet av både teknik (git) och metod (hur du tänkt arbeta)
-
-[:heavy_check_mark:] Hur påverkar användningen av Javascript moduler kodens struktur?
