@@ -58,11 +58,12 @@ Andra inlämningen handlar om att bygga vidare på den första inlämningen. En 
 
 [ ] Minst två av dina komponenter ska använda sig av state för att rendera tillståndsbaserad information. (i.e. "conditional rendering")
 
-[ ] En av dina komponenter använder sig av en Lifecycle metod eller hook för att påverka en annan komponents tillstånd. Render räknas inte som en lifecycle metod.
+[:heavy_check_mark:] En av dina komponenter använder sig av en Lifecycle metod eller hook för att påverka en annan komponents tillstånd. Render räknas inte som en lifecycle metod.
 
-[ ] Via en av komponenterna ska användaren kunna spara information i LocalStorage.
+[:heavy_check_mark:] Via en av komponenterna ska användaren kunna spara information i LocalStorage.
+- tillägg: man kan spara sitt användarnamn om man klickar i Remember me.
 
-[ ] Informationen i LocalStorage används vid renderingen av React-trädet.
+[:heavy_check_mark:] Informationen i LocalStorage används vid renderingen av React-trädet.
 
 [:heavy_check_mark:] I app.html används egen css, eller ett bibliotek för att ge dina komponenter stil och form
 	
