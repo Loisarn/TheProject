@@ -31,31 +31,31 @@ function Navbar() {
     return (
         <>
         <nav className="navbar">
-        <Link to='/' className='navbar-logo'>Floppy</Link>
+        <Link to='/home' className='navbar-logo'>Floppy</Link>
         <div className="menu-icon" onClick={handleClick}>
             <i className={click ? 'fas fa-times' : 'fas fa-bars'}
             />
         </div>
         <ul className={click ? 'nav-menu active' : 'nav-menu'}>
             <li className='nav-item'>
-                <Link to='/' className='nav-links' onClick={closeMobileMenu}>
+                <Link to='/home' className='nav-links' onClick={closeMobileMenu}>
                     Home
                 </Link>
             </li>
             <li className='nav-item' onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} >
-                <Link to='/Car' className='nav-links' onClick={closeMobileMenu}>
+                <Link to='/car' className='nav-links' onClick={closeMobileMenu}>
                     Bilen <i className='fas fa-caret-down' />
                 </Link>
                 {dropdown && <Dropdown />}
             </li>
             <li className='nav-item' onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
-                <Link to='/House' className='nav-links' onClick={closeMobileMenu}>
+                <Link to='/house' className='nav-links' onClick={closeMobileMenu}>
                     Huset <i className='fas fa-caret-down' />
                 </Link>
                 {dropdown && <Dropdown />}
             </li>
             <li className='nav-item'>
-                <Link to='/login' className='nav-links-mobile' onClick={closeMobileMenu}>
+                <Link to='/signup' className='nav-links-mobile' onClick={closeMobileMenu}>
                     Logga in
                 </Link>
             </li>
