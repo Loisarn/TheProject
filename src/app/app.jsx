@@ -9,6 +9,7 @@ import Kostnad from './pages/Kostnad.js';
 import SignIn from './pages/Signin.js';
 import Car from './Car.jsx';
 import House from './House.jsx';
+import Receipt from './Receipt.jsx';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
             <Route path='/signup' element={<SignIn/>} />
             <Route path='/house' element={<House/>} />
             <Route path='/car' element={<Car/>} />
+            <Route path='/receipt' element={<Receipt/>} />
         </Routes>
         </Router>
     );

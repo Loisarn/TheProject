@@ -44,15 +44,20 @@ function Navbar() {
             </li>
             <li className='nav-item' onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} >
                 <Link to='/car' className='nav-links' onClick={closeMobileMenu}>
-                    Bilen <i className='fas fa-caret-down' />
+                    Fordon <i className='fas fa-caret-down' />
                 </Link>
                 {dropdown && <Dropdown />}
             </li>
             <li className='nav-item' onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
                 <Link to='/house' className='nav-links' onClick={closeMobileMenu}>
-                    Huset <i className='fas fa-caret-down' />
+                    Bostad <i className='fas fa-caret-down' />
                 </Link>
                 {dropdown && <Dropdown />}
+            </li>
+            <li className='nav-item' >
+                <Link to='/receipt' className='nav-links' >
+                    Kvitton <i className='bill' />
+                </Link>
             </li>
             <li className='nav-item'>
                 <Link to='/signup' className='nav-links-mobile' onClick={closeMobileMenu}>
