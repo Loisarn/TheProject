@@ -11,12 +11,15 @@ import Car from './Car.jsx';
 import House from './House.jsx';
 import Receipt from './Receipt.jsx';
 import axios from 'axios';
+import SearchBar from './SearchBar.jsx';
+import Data from "./Data.json";
 
 
 function App() {
     return(
         <Router>
         <Navbar />
+        <SearchBar placeholder="Search" data={Data} />
         <Routes>
             <Route path='/home' element={<Home/>} />
             <Route path='/renovering' element={<Renovering/>} />
