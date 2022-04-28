@@ -35,7 +35,7 @@ Andra inlämningen handlar om att bygga vidare på den första inlämningen. En 
 - React
 
 ## Externa biblioteket
-
+- Material UI
 ## Tjänster
 
 ## Kravlista för källkodsprojektet
@@ -52,7 +52,7 @@ Andra inlämningen handlar om att bygga vidare på den första inlämningen. En 
 
 [ ] Koden ska bestå av minst 12 React komponenter du skrivit själv med hjälp av JSX.	
 
-[ ] Välj och installera ett färdigt javascript-paket i ditt källodsprojekt som används tillsammans med React.	
+[:heavy_check_mark:] Välj och installera ett färdigt javascript-paket i ditt källodsprojekt som används tillsammans med React.	
 
 [ ] Din prototyp ska innehålla minst ett användningstillfälle av javascript biblioteket när den används via en webbläsare.	
 
