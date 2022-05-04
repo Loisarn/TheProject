@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import './app.css';
-import { MenuItems } from './MenuItems';
+import '../app.css';
+import { MenuItems } from '../MenuItems';
 
 function Dropdown() {
     const [click, setClick] = useState(false);

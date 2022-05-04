@@ -1,6 +1,6 @@
 import React from 'react';
-import './app.css';
-import PostForm from '../API/PostForm.js';
+import '../app.css';
+import PostForm from '../../api/PostForm.js';
 
 export default function Car() {
     return (

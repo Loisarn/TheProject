@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './app.css';
+import '../app.css';
 import SearchIcon from "@mui/icons-material/Search";
 import CloseIcon from "@mui/icons-material/Close";
 

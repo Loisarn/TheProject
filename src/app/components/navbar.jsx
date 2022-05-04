@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import './app.css';
+import '../app.css';
 import Dropdown from './Dropdown';
-import { Button } from './Button';
+import { Button } from './button';
 
 function Navbar() {
     const [click, setClick] = useState(false);

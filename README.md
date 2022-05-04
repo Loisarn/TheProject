@@ -36,15 +36,19 @@ Andra inlämningen handlar om att bygga vidare på den första inlämningen. En 
 
 ## Externa biblioteket
 - Material UI
+- Dexie.js
+- React-detect-offline
+- Axios
 ## Tjänster
+
 
 ## Kravlista för källkodsprojektet
 
 [:heavy_check_mark:]	Ditt inlämnade arbete ska fortsätta från samma källkodsprojekt (repo) som tidigare inlämningsuppgifter. app.html ska vara uppdaterad med din vidareutvecklade prototyp	
 
-[ ] Din readme.md fil ska uppdateras med korrekta instruktioner för hur din applikation ska startas och varefter efterföljande krav ska kunna testas
+[:heavy_check_mark:] Din readme.md fil ska uppdateras med korrekta instruktioner för hur din applikation ska startas och varefter efterföljande krav ska kunna testas
 	
-[ ] I din källkod ska readme.md-filen under rubriken "externa bibliotek" innehålla en lista av dina installerade tredjepartsbibliotek. Förklara kort varför de används	
+[:heavy_check_mark:] I din källkod ska readme.md-filen under rubriken "externa bibliotek" innehålla en lista av dina installerade tredjepartsbibliotek. Förklara kort varför de används	
 
 [ ] Readme.md ska även innehålla rubriken Tjänster där du listar och förklarar de Webb-API:er som anropas av din prototyp. - vart i koden & varför	
 
@@ -54,17 +58,17 @@ Andra inlämningen handlar om att bygga vidare på den första inlämningen. En 
 
 [:heavy_check_mark:] Välj och installera ett färdigt javascript-paket i ditt källodsprojekt som används tillsammans med React.	
 
-[ ] Din prototyp ska innehålla minst ett användningstillfälle av javascript biblioteket när den används via en webbläsare.	
+[:heavy_check_mark:] Din prototyp ska innehålla minst ett användningstillfälle av javascript biblioteket när den används via en webbläsare.	
 
 [ ] Din applikation ska hämta och visa information för användaren som hämtas via anrop till ett externt REST API.	
 
 [ ] Din applikation ska skicka information skapad via interaktion med användaren till ett externt REST API.	
 
-[ ] Kommunikationen till externa Webb-API:er i applikationen ska vara väl avgränsat från applikationens UI med hjälp av lämplig kodstruktur.	
+[:heavy_check_mark:] Kommunikationen till externa Webb-API:er i applikationen ska vara väl avgränsat från applikationens UI med hjälp av lämplig kodstruktur.	
 
 [ ] Minst två av dina egna komponenter ska utnyttja (läsa och/eller spara) information lokalt i webbläsaren via en datalagringsmetod som inte är local storage.	
 
-[ ] Minst en av dina egna komponenter ska rendera och använda sig av en kontrollerad form komponent (i.e. en "Controlled Component")	
+[:heavy_check_mark:] Minst en av dina egna komponenter ska rendera och använda sig av en kontrollerad form komponent (i.e. en "Controlled Component")	
 
 [ ] Minst fem av dina komponenter ska använda sig av state eller props för att rendera tillståndsbaserad information. (i.e. "conditional rendering")	
   
