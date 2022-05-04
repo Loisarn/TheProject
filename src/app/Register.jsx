@@ -85,6 +85,7 @@ const Register = () => {
     }
     
     return (
+       
         <section>
             <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>  
             <h1>Registrera dig</h1>  
@@ -173,13 +174,15 @@ const Register = () => {
             <p>
                 Redan registrerad? <br />
                 <span className="line">
-                    {/*router link här*/}
-                    <a href="#">Logga in</a>
+                    <a href="/signup">Logga in</a>
                 </span>
             </p>
 
      </section>
+     
     )
+    
 }
+
 
 export default Register

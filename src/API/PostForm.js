@@ -46,9 +46,8 @@ class PostForm extends React.Component {
             <div className="container">
                 <div className="row justify-content-center">
                     <div className="col-md-8">
-                        <h1 className="display-4 text-center">Fordon</h1>
                         <form className="d-flex flex-column">
-                            <legend className="text-center">Add-update-delete</legend>
+                            
                             <label htmlFor="what">Vad
                             <input 
                             what="vad"
@@ -59,11 +58,11 @@ class PostForm extends React.Component {
                             onChange={(e) => this.handleChange ({ what: e.target.value})} required
                             />
                             </label>
-                            <label htmlFor="cost">kostnad
+                            <label htmlFor="cost">Kostnad
                             <input 
                             cost="cost"
                             id="name"
-                            type="test"
+                            type="text"
                             className="form-control"
                             value={this.state.cost}
                             onChange={(e) => this.handleChange ({ cost: e.target.value})} required

@@ -316,7 +316,7 @@
 
   .container {
     border-radius: 5px;
-    background-color: #f2f2f2;
+    background-color: #070707;
     padding: 20px;
   }
 
@@ -343,6 +343,11 @@ input[type=text], select, textarea {
   resize: vertical;
 }
 
+h1 {
+  text-align: center;
+  color: black;
+}
+
 html {
   font-family: 'Nunito', sans-serif;
   font-size: 22px;
@@ -358,6 +363,8 @@ section {
   justify-content: flex-start;
   padding: 1rem;
   background-color: black;
+  margin: 50px;
+  
 }
 
 form {
@@ -434,4 +441,14 @@ padding: 0.5rem;
 
 .line {
   display: inline-block;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
 }

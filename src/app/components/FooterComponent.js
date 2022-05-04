@@ -13,7 +13,7 @@ export class FooterComponent extends React.Component {
         return (
             <div>
                 <footer className="footer">
-                    <span className="text-muted">@Loisarn</span>
+                    <span className="text-muted">@Loisarn 2022</span>
                 </footer>
             </div>
         )

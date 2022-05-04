@@ -64,7 +64,7 @@ const Login = () => {
               <h1>Du är inloggad.</h1>
               <br />
               <p>
-                 <a href="#">Tryck på hem</a> 
+                 <a href="/home">Tryck på hem</a> 
                   </p>
           </section>
       ) : ( 

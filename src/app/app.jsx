@@ -17,6 +17,7 @@ import Login from "./Login.jsx";
 import { AuthProvider } from '../context/AuthProvider.js';
 import Register from './Register.jsx';
 import CreateFordon from './components/CreateFordon.jsx';
+import FooterComponent from './components/FooterComponent.js';
 
 
 
@@ -29,12 +30,13 @@ function App() {
             <Route path='/home' element={<Home/>} />
             <Route path='/renovering' element={<Renovering/>} />
             <Route path='/cost' element={<Kostnad/>} />
-            <Route path='/signup/*' element={<Login/>} />
+            <Route path='/signup' element={<Login/>} />
             <Route path='/house' element={<House/>} />
             <Route path='/car' element={<Car/>} />
             <Route path='/receipt' element={<Receipt/>} />
             <Route path='/register' element={<Register/>} />
         </Routes>
+            < FooterComponent />
         </Router>
     );
 }
