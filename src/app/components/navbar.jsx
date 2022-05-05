@@ -59,6 +59,11 @@ function Navbar() {
                     Kvitton <i className='bill' />
                 </Link>
             </li>
+            <li className='nav-item' >
+                <Link to='/contact' className='nav-links' >
+                    Kontakt <i className='contact' />
+                </Link>
+            </li>
             <li className='nav-item'>
                 <Link to='/signup' className='nav-links-mobile' onClick={closeMobileMenu}>
                     Logga in

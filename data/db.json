@@ -1,0 +1,17 @@
+{
+    "vehicles": [
+        {
+            "what": "Oljebyte",
+            "cost": "2000kr",
+            "model": "Vit BMW",
+            "regNum": "LXB042"
+        },
+        {
+            "what": "Bytt bromsar",
+            "cost": "1500kr",
+            "model": "Svart Honda",
+            "regNum": "OOA581"
+        }
+    ]  
+}
+

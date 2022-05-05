@@ -1,5 +1,7 @@
 import React from 'react';
 import '../app/app.css';
+import $ from '../../node_modules/jquery';
+import Calendar from '../app/components/Calendar.jsx';
 
 class PostForm extends React.Component {
 
@@ -43,11 +45,12 @@ class PostForm extends React.Component {
 
     render() {
         return (
+            <>
             <div className="container">
                 <div className="row justify-content-center">
                     <div className="col-md-8">
                         <form className="d-flex flex-column">
-                            
+                           
                             <label htmlFor="what">Vad
                             <input 
                             what="vad"
@@ -84,9 +87,12 @@ class PostForm extends React.Component {
                     </div>
                 </div>
             </div>
+            </>
         );
     }
+    
 }
+
 //     constructor(props) {
 //         super(props)
 
