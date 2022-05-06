@@ -6,9 +6,12 @@ class ViewFordon extends React.Component {
         super(props)
 
         this.state = {
-            id: this.props.match.params.id,
-            vehicles: []
-        }
+            id: '',
+            what: '',
+            cost: '',
+            model: '',
+            regNum: '',
+        };
     }
 
     componentDidMount() {

@@ -36,8 +36,7 @@ function App() {
             <Route path='/receipt' element={<Receipt/>} />
             <Route path='/register' element={<Register/>} />
             <Route path='/contact' element={<Contact/>} />
-            <Route path='/vehicles/:id' element={<FordonList/>} />
-            
+            <Route path='/vehicles' element={<FordonList/>} />
         </Routes>
             < FooterComponent />
         </Router>

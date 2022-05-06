@@ -2,9 +2,11 @@
 Inlämning 1, Moderna Webbapplikationer
 
 ## How to use
-För att få programmet att fungera måste man installera node.js, om man inte redan har det installerat. För att sedan kunna köra programmet krävs det att man installerar parcel, react, react-router-dom och react-dom. 
-(exempel:  npm install --save-dev parcel, react, react-router-dom, react-dom ) 
-sedan skriver man cd src (så att man kommer in i rätt mapp) för att sedan skriva npm start.
+För att få programmet att fungera måste man installera node.js, om man inte redan har det installerat. För att sedan kunna köra programmet krävs det att man installerar parcel, react, react-router-dom och JSON Server. 
+(exempel:  npm install --save-dev parcel, react, react-router-dom, json-server ) 
+(ett litet tips är att skriva npm install json-server -p 3000 -w data/db.json)
+
+för att starta programmet efter att man har installerat nödvändiga paket skriver man  'npm start' i terminalen. Tryck upp en till terminal och skriv där i 'npm run server' för att starta json-servern, annars får användaren inte ut information på sidan.
 
 (disclaimer: när jag installerade hade jag problem i package.json och var tvungen att ändra, om detta skulle hända andra så kommer här information om vad man kan behöva ändra):
 
@@ -20,12 +22,12 @@ sedan skriver man cd src (så att man kommer in i rätt mapp) för att sedan skr
 
     "start": "parcel", <-
     
-    "dev": "lite-server"
+    "dev": "lite-server",
+
+    "server": "json-server -p 3000 -w data/db.json"
 
 ## Project Description
-Andra inlämningen handlar om att bygga vidare på den första inlämningen. En första prototyp på idén som man har. Vi får även lära oss att använda Parcel för att kunna transpilera koden. Det är även en introduktion till React och vi får lära oss att koda komponenter, använda hooks och använda oss av JSX syntax.
-
-<img width="1180" alt="Skärmavbild 2022-04-07 kl  12 22 09" src="https://user-images.githubusercontent.com/89778044/162179946-ea6c33f8-676f-4832-8952-f513bb68bebb.png">
+Tredje inlämningen handlar om att interagera med REST-API:et och att dyka ner i fler externa bibliotek. I denna uppgift har vi även jobbat med react-router.
 
 ## Technologies used
 - Html
@@ -33,13 +35,16 @@ Andra inlämningen handlar om att bygga vidare på den första inlämningen. En 
 - Javascript
 - Parcel
 - React
+- Axios
 
 ## Externa biblioteket
-- Material UI
-- Dexie.js
+- Material UI - är ett UI bibliotek som låter en använda bland annat ikoner till komponenterna, utan att man behöver skriva mycket kod.
 - React-detect-offline
 - Axios
+
+- (JSON SERVER)
 ## Tjänster
+Jag har valt att använda mig av JSON Server och Axios, när det kommer till REST API. Mina anrop görs i mappen som är döpt till api. I den innehåller filer som till exempel "FordonList, CreateFordon och ViewFordon. Just nu funkar bara anropet GET & DELETE, som hämtar/raderar informationen, och dessa anrop kommer från FordonList och BostadList.
 
 
 ## Kravlista för källkodsprojektet
@@ -50,7 +55,7 @@ Andra inlämningen handlar om att bygga vidare på den första inlämningen. En 
 	
 [:heavy_check_mark:] I din källkod ska readme.md-filen under rubriken "externa bibliotek" innehålla en lista av dina installerade tredjepartsbibliotek. Förklara kort varför de används	
 
-[ ] Readme.md ska även innehålla rubriken Tjänster där du listar och förklarar de Webb-API:er som anropas av din prototyp. - vart i koden & varför	
+[:heavy_check_mark:] Readme.md ska även innehålla rubriken Tjänster där du listar och förklarar de Webb-API:er som anropas av din prototyp. - vart i koden & varför	
 
 [:heavy_check_mark:] Med din versionshanteringsteknik ska det vara tydligt hur projektet kan återställas till en variant där ditt valda tredjepartspaket inte är installerat, och även där det läggs till i versionshistoriken	
 
@@ -62,7 +67,7 @@ Andra inlämningen handlar om att bygga vidare på den första inlämningen. En 
 
 [:heavy_check_mark:] Din applikation ska hämta och visa information för användaren som hämtas via anrop till ett externt REST API.	
 
-[ ] Din applikation ska skicka information skapad via interaktion med användaren till ett externt REST API.	
+[:heavy_check_mark:] Din applikation ska skicka information skapad via interaktion med användaren till ett externt REST API.	
 
 [:heavy_check_mark:] Kommunikationen till externa Webb-API:er i applikationen ska vara väl avgränsat från applikationens UI med hjälp av lämplig kodstruktur.	
 

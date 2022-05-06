@@ -1,12 +1,12 @@
 import React from 'react';
-import FordonService from "../../services/FordonService";
+import FordonService from "../services/FordonService";
 
 export class CreateFordon extends React.Component {
     constructor(props) {
         super(props)
 
         this.state = {
-            id: this.props.match.params.id,
+            id: '',
             what: '',
             cost: '',
             model: '',
@@ -19,23 +19,6 @@ export class CreateFordon extends React.Component {
         this.saveOrUpdateVehicle = this.saveOrUpdateVehicle.bind(this);
     }
 
-    componentDidMount() {
-
-        if(this.state.id === '_add') {
-            return
-        } else {
-            FordonService.getVehicleById(this.state.id).then( (res) => {
-                let vehicles = res.data;
-                this.setState({
-                    what: vehicles.what, 
-                    cost: vehicles.cost, 
-                    model: vehicles.model,
-                    regNum: vehicles.regNum,
-                    id: vehicles.id,
-                });
-            });
-        }
-    }
 
 saveOrUpdateVehicle = (e) => {
     e.preventDefault();
@@ -45,21 +28,11 @@ saveOrUpdateVehicle = (e) => {
         this.state.regNum, id: 
         this.state.id};
 
-    console.log('vehicle => ' + JSON.stringify(vehicles));
+    console.log('vehicles => ' + JSON.stringify(vehicles));
 
     FordonService.createVehicle(vehicles).then((res) => {
         this.setState({vehicles: res.data})
     });
-
-     if(this.state.id === '_add') {
-         FordonService.createVehicle(vehicles).then(res => {
-             this.props.navigate('/vehicles');
-         });
-     } else {
-         FordonService.updateVehicle(vehicles, this.state.id).then( res => {
-             this.props.navigate('/vehicles');
-          });
-      }
 }
 
 changeWhatHandler = (event) => {
@@ -82,23 +55,12 @@ cancel(){
     this.props.navigate('/vehicles');
 }
 
-getTitle(){
-    if(this.state.id === '_add'){
-        return ( <h3 className="text-center">Lägg till</h3> )
-    } else {
-        return <h3 className="text-center">Uppdatera</h3>
-    }
-}
-
 render() {
     return (
         <div>
             <br></br>
             <div className="container">
                 <div className="card col-md-6 offset-md-3 offset-md-3">
-                    {
-                        this.getTitle()
-                    }
                     <div className="card-body">
                         <form>
                             <div className="form-group">
@@ -110,7 +72,7 @@ render() {
                                 <input placeholder="kostnad" cost="cost" className="form-control" value={this.state.cost} onChange={this.changeCostHandler}/>
                                 </div>
                                 <div className="form-group">
-                                <label>Model</label>
+                                <label>Modell</label>
                                 <input placeholder="model" model="model" className="form-control" value={this.state.model} onChange={this.changeModelHandler}/>
                                 </div>
                                 <div className="form-group">

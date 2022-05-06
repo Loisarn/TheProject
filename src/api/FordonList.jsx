@@ -23,7 +23,7 @@ class FordonList extends React.Component {
     }
 
     viewVehicle(id) {
-        this.props.navigate(`/vehicles/${id}`);
+        this.props.navigate(`/ViewFordon/${id}`);
     }
     editVehicle(id) {
         this.props.navigate(`/vehicles/${id}`);
