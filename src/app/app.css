@@ -452,3 +452,22 @@ padding: 0.5rem;
   color: white;
   text-align: center;
 }
+
+.contact {
+  color: black;
+}
+
+.fordonlist, .row {
+  color: black;
+  margin: 10px;
+}
+
+h2 {
+  color: black;
+  text-align: center;
+}
+
+.register, .login {
+  color: white;
+}
+

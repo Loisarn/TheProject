@@ -54,13 +54,13 @@ Andra inlämningen handlar om att bygga vidare på den första inlämningen. En 
 
 [:heavy_check_mark:] Med din versionshanteringsteknik ska det vara tydligt hur projektet kan återställas till en variant där ditt valda tredjepartspaket inte är installerat, och även där det läggs till i versionshistoriken	
 
-[ ] Koden ska bestå av minst 12 React komponenter du skrivit själv med hjälp av JSX.	
+[:heavy_check_mark:] Koden ska bestå av minst 12 React komponenter du skrivit själv med hjälp av JSX.	
 
 [:heavy_check_mark:] Välj och installera ett färdigt javascript-paket i ditt källodsprojekt som används tillsammans med React.	
 
 [:heavy_check_mark:] Din prototyp ska innehålla minst ett användningstillfälle av javascript biblioteket när den används via en webbläsare.	
 
-[ ] Din applikation ska hämta och visa information för användaren som hämtas via anrop till ett externt REST API.	
+[:heavy_check_mark:] Din applikation ska hämta och visa information för användaren som hämtas via anrop till ett externt REST API.	
 
 [ ] Din applikation ska skicka information skapad via interaktion med användaren till ett externt REST API.	
 
@@ -70,7 +70,7 @@ Andra inlämningen handlar om att bygga vidare på den första inlämningen. En 
 
 [:heavy_check_mark:] Minst en av dina egna komponenter ska rendera och använda sig av en kontrollerad form komponent (i.e. en "Controlled Component")	
 
-[ ] Minst fem av dina komponenter ska använda sig av state eller props för att rendera tillståndsbaserad information. (i.e. "conditional rendering")	
+[:heavy_check_mark:] Minst fem av dina komponenter ska använda sig av state eller props för att rendera tillståndsbaserad information. (i.e. "conditional rendering")	
   
 
 ## Kravlista för rapporten

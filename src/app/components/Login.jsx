@@ -1,9 +1,10 @@
 import React, { useRef, useState, useEffect, useContext } from 'react';
-import AuthContext from "../context/AuthProvider.js";
+import AuthContext from "../../context/AuthProvider.js";
 import Register from "./Register.jsx";
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import UserService from '../../services/UserService.js';
+import { Link } from 'react-router-dom';
 
-import axios from '../api/axios';
 const LOGIN_URL = '/auth';
 
 const Login = () => {
@@ -70,7 +71,7 @@ const Login = () => {
       ) : ( 
     <section>
       <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
-      <h1>Logga in</h1>
+      <h1 className="login">Logga in</h1>
       <form onSubmit={handleSubmit}>
           <label htmlFor="username">Användarnamn:</label>
           <input type="text" placeholder="användarnamn" id="username" 
@@ -88,7 +89,7 @@ const Login = () => {
       <p>
           Need an Account? <br />
           <span className="line">
-              {<a href="/register">Sign up</a>}
+              {<Link to="/register">Sign up</Link>}
           </span>
       </p>
     </section>

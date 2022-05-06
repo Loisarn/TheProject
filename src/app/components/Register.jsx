@@ -2,6 +2,7 @@ import React, { useRef, useState, useEffect } from 'react';
 import { faCheck, faTimes, faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 const USER_REGEX = /^[a-zA-Z][a-zA-Z0-9-_]{3,23}$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{6,24}$/;
@@ -88,7 +89,7 @@ const Register = () => {
        
         <section>
             <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>  
-            <h1>Registrera dig</h1>  
+            <h1 className="register">Registrera dig</h1>  
             <form onSubmit={handleSubmit}>
                 <label htmlFor="username">Användarnamn
                 <span className={validName ? "valid" : "hide"}>
@@ -174,7 +175,7 @@ const Register = () => {
             <p>
                 Redan registrerad? <br />
                 <span className="line">
-                    <a href="/signup">Logga in</a>
+                    <Link to="/signup">Logga in</Link>
                 </span>
             </p>
 

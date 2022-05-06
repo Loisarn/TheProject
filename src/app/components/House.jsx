@@ -1,12 +1,14 @@
 import React from 'react';
 import '../app.css';
-import PostForm from '../../api/PostForm.js';
+import BostadList from '../../api/BostadList.jsx';
+import { useNavigate } from 'react-router';
 
 export default function House() {
+    const navigate = useNavigate();
     return (
         <>
-        <h1 className="house">Bostad</h1>
-        <PostForm />
+        
+        <BostadList navigate={navigate}/>
         </>
     );
 }

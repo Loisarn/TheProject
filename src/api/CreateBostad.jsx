@@ -1,7 +1,7 @@
 import React from 'react';
-import FordonService from "../../services/FordonService";
+import BostadService from "../../services/BostadService.js";
 
-export class CreateFordon extends React.Component {
+export class CreateBostad extends React.Component {
     constructor(props) {
         super(props)
 
@@ -9,10 +9,13 @@ export class CreateFordon extends React.Component {
             id: this.props.match.params.id,
             what: '',
             cost: '',
+            room: '',
+            
         }
         this.changeWhatHandler = this.changeWhatHandler.bind(this);
         this.changeCostHandler = this.changeCostHandler.bind(this);
-        this.saveOrUpdateFordon = this.saveOrUpdateFordon.bind(this);
+        this.changeRoomHandler = this.changeRoomHandler.bind(this);
+        this.saveOrUpdateHouse = this.saveOrUpdateHouse.bind(this);
     }
 
     componentDidMount() {
@@ -20,30 +23,40 @@ export class CreateFordon extends React.Component {
         if(this.state.id === '_add') {
             return
         } else {
-            FordonService.getFordonById(this.state.id).then( (res) => {
-                let fordon = res.data;
-                this.setState({what: fordon.what, 
-                    cost: fordon.cost, 
-                    id: fordon.id
+            BostadService.getHouseById(this.state.id).then( (res) => {
+                let houses = res.data;
+                this.setState({
+                    what: houses.what, 
+                    cost: houses.cost, 
+                    room: houses.room,
+                    id: houses.id,
                 });
             });
         }
     }
 
-saveOrUpdateFordon = (e) => {
+saveOrUpdateHouse = (e) => {
     e.preventDefault();
-    let fordon = {what: this.state.what, cost: this.state.cost, id: this.state.id};
-    console.log('fordon => ' + JSON.stringify(fordon));
+    let houses = {what: this.state.what, 
+        cost: this.state.cost, 
+        room: this.state.room, 
+         id: this.state.id};
 
-    if(this.state.id === '_add') {
-        FordonService.createFordon(fordon).then(res => {
-            this.props.history.push('/fordon');
-        });
-    } else {
-        FordonService.updateFordon(fordon, this.state.id).then( res => {
-            this.props.history.push('/fordon');
+    console.log('houses => ' + JSON.stringify(houses));
+
+    BostadService.createHouse(houses).then((res) => {
+        this.setState({houses: res.data})
+    });
+
+     if(this.state.id === '_add') {
+         BostadService.createHouse(houses).then(res => {
+            this.props.navigate('/houses');
          });
-     }
+     } else {
+         BostadService.updateHouse(houses, this.state.id).then( res => {
+             this.props.navigate('/houses');
+         });
+      }
 }
 
 changeWhatHandler = (event) => {
@@ -54,12 +67,12 @@ changeCostHandler = (event) => {
     this.setState({cost: event.target.value});
 }
 
-changeIdHandler = (event) => {
-    this.setState({id: event.target.value});
+changeRoomHandler = (event) => {
+    this.setState({room: event.target.value});
 }
 
 cancel(){
-    this.props.history.push('/fordon');
+    this.props.navigate('/houses');
 }
 
 getTitle(){
@@ -74,7 +87,7 @@ render() {
     return (
         <div>
             <br></br>
-            <div class="container">
+            <div className="container">
                 <div className="card col-md-6 offset-md-3 offset-md-3">
                     {
                         this.getTitle()
@@ -90,11 +103,12 @@ render() {
                                 <input placeholder="kostnad" cost="cost" className="form-control" value={this.state.cost} onChange={this.changeCostHandler}/>
                                 </div>
                                 <div className="form-group">
-                                <label>Id</label>
-                                <input placeholder="id" id="id" className="form-control" value={this.state.id} onChange={this.changeIdHandler}/>
+                                <label>Rum</label>
+                                <input placeholder="model" model="model" className="form-control" value={this.state.room} onChange={this.changeRoomHandler}/>
                                 </div>
+                                
 
-                                <button className="btn btn-success" onClick={this.saveOrUpdateFordon}>Spara</button>
+                                <button className="btn btn-success" onClick={this.saveOrUpdateHouse}>Spara</button>
                                 <button className="btn btn-danger" onClick={this.cancel.bind(this)} style={{marginLeft: "10px"}}>Avbryt</button>
                         </form>
                     </div>

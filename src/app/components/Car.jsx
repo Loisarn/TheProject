@@ -1,12 +1,15 @@
 import React from 'react';
+import { useNavigate } from 'react-router';
 import '../app.css';
-import PostForm from '../../api/PostForm.js';
+import  FordonList from "../../api/FordonList.jsx";
 
 export default function Car() {
+    const navigate = useNavigate();
     return (
         <>
-        <h1 className="car">Fordon</h1>
-        <PostForm />
+        
+         < FordonList navigate={navigate}/>
+    
         </>
     );
 }

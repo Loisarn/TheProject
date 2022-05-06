@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import '../app.css';
 import SearchIcon from "@mui/icons-material/Search";
 import CloseIcon from "@mui/icons-material/Close";
+import  { db as data } from "../../../data/db.json";
+
 
 function Searchbar({placeholder, data}) {
     const [filteredData, setFilteredData] = useState([]);
@@ -11,7 +13,7 @@ function Searchbar({placeholder, data}) {
         const searchWord = event.target.value;
         setWordEntered(searchWord);
         const newFilter = data.filter((value) => {
-            return value.numberplate.toLowerCase().includes(searchWord.toLowerCase());
+            return value.model.toLowerCase().includes(searchWord.toLowerCase());
         });
 
         if(searchWord === "") {
@@ -41,7 +43,7 @@ function Searchbar({placeholder, data}) {
           <div className="dataResult">
               {filteredData.slice(0, 15).map((value, key) => {
                   return (
-                       <a className="dataItem" href={value.link}> <p>{value.numberplate}</p> </a>
+                       <a className="dataItem" href={value.link}> <p>{value.model}</p> </a>
                   );
 
               })}

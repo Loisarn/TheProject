@@ -1,27 +1,27 @@
 import axios from 'axios';
 
-const VEHICLE_API_BASE_URL = "http://localhost:1234/api/v1/vehicles";
+const VEHICLE_API_BASE_URL = "http://localhost:3000/vehicles";
 
 export class FordonService {
 
-    getFordon() {
+    getVehicle() {
         return axios.get(VEHICLE_API_BASE_URL);
     }
 
-    createFordon(fordon) {
-        return axios.post(VEHICLE_API_BASE_URL, fordon);
+    createVehicle(vehicles) {
+        return axios.post(VEHICLE_API_BASE_URL, vehicles);
     }
 
-    getFordonById(fordonId) {
-        return axios.get(VEHICLE_API_BASE_URL + '/' + fordonId);
+    getVehicleById(vehicleId) {
+        return axios.get(VEHICLE_API_BASE_URL + '/' + vehicleId);
     }
 
-    updateFordon(fordon, fordonId) {
-        return axios.put(VEHICLE_API_BASE_URL + '/' + fordonId, fordon);
+    updateVehicle(vehicles, vehicleId) {
+        return axios.put(VEHICLE_API_BASE_URL + '/' + vehicleId, vehicles);
     }
 
-    deleteFordon(fordonId) {
-        return axios.delete(VEHICLE_API_BASE_URL + '/' + fordonId)
+    deleteVehicle(vehicleId) {
+        return axios.delete(VEHICLE_API_BASE_URL + '/' + vehicleId)
     }
 }
 
