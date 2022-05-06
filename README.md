@@ -38,11 +38,14 @@ Tredje inlämningen handlar om att interagera med REST-API:et och att dyka ner i
 - Axios
 
 ## Externa biblioteket
-- Material UI - är ett UI bibliotek som låter en använda bland annat ikoner till komponenterna, utan att man behöver skriva mycket kod.
-- React-detect-offline
-- Axios
-
-- (JSON SERVER)
+- Material UI = är ett UI bibliotek som låter en använda bland annat ikoner till komponenterna, utan att man behöver skriva mycket kod.
+- React-detect-offline = för att användaren ska kunna använda sig av appen offline, dock inte implementerad.
+- Axios = Detta bibliotek används istället för fetch.
+- FontAwesome = För att kunna hämta ikoner.
+- (JSON SERVER) 
+- Parcel = För att transpilera koden.
+- Lite-server = refreshar sidan när man ändrar något i html eller javascript.
+- bootstrap = För att slippa skriva mycket CSS kod.
 ## Tjänster
 Jag har valt att använda mig av JSON Server och Axios, när det kommer till REST API. Mina anrop görs i mappen som är döpt till api. I den innehåller filer som till exempel "FordonList, CreateFordon och ViewFordon. Just nu funkar bara anropet GET & DELETE, som hämtar/raderar informationen, och dessa anrop kommer från FordonList och BostadList.
 
@@ -81,25 +84,25 @@ Jag har valt att använda mig av JSON Server och Axios, när det kommer till RES
 ## Kravlista för rapporten
 Svara på följande frågor i din inlämnade pdf-fil, varje fråga ska besvaras under sin egna rubrik.
 
-[ ] Rubrik: Mitt bibliotek
+[:heavy_check_mark:] Rubrik: Mitt bibliotek
 Beskriv och förklara användningsområdet av det ramverk/bibliotek utöver React som du använt i din applikation. (en till två paragrafer)
 	
-[ ] Rubrik: Om extern datalagring och React
+[:heavy_check_mark:] Rubrik: Om extern datalagring och React
 Förklara med egna ord vad som är viktigt att tänka på vid användningen av extern datalagring tillsammans med React. (en till två paragrafer).
 
-[ ] Rubrik: Om URL:en
+[:heavy_check_mark:] Rubrik: Om URL:en
 När vi gör förändringar i vår applikation, vad är viktigt att tänka på om vi använt webbläsaradressen (URL) som en datalagringsplats för klienten? (max. 1 paragraf).
 
 
-[ ] Rubrik: Mitt val av bibliotek
+[:heavy_check_mark:] Rubrik: Mitt val av bibliotek
 Motivera varför ditt valda bibliotek är ett lämpligt val för ändamålet. Fundera både över paketets utformning, funktionalitet och dess bakomliggande utgivare. (svara utförligt)
 
 
-[ ] Rubrik: Min kodstruktur
+[:heavy_check_mark:] Rubrik: Min kodstruktur
 Vilken kodstruktur och ev. designmönster har du använt dig av i koden för att separera applikationens UI från kommunikationen med REST API:er i källkoden, varför är detta en lämplig struktur? (svara utförligt)
 
 	
-[ ] Rubrik: Min prototyps externa datalagring
+[:heavy_check_mark:] Rubrik: Min prototyps externa datalagring
 Till vilka ändamål använder du nu i din prototyp extern datalagring - båda lokal och via ev. API:er. Motivera valet av dessa sett till användarupplevelsen av din prototyp. Finns det fler platser där extern datalagring vore lämpligt? (svara utförligt)
  
 
