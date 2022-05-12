@@ -1,0 +1,48 @@
+{
+  "name": "theproject",
+  "version": "1.0.0",
+  "description": "Inlämning 1, Moderna Webbapplikationer",
+  "source": "./public/app.html",
+  "scripts": {
+    "start": "parcel",
+    "dev": "lite-server",
+    "server": "json-server -p 3000 -w data/db.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Loisarn/TheProject.git"
+  },
+  "author": "Loisarn",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Loisarn/TheProject/issues"
+  },
+  "homepage": "https://github.com/Loisarn/TheProject#readme",
+  "dependencies": {
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1",
+    "@fortawesome/fontawesome-svg-core": "^6.1.1",
+    "@fortawesome/free-regular-svg-icons": "^6.1.1",
+    "@fortawesome/free-solid-svg-icons": "^6.1.1",
+    "@fortawesome/react-fontawesome": "^0.1.18",
+    "@mui/icons-material": "^5.6.2",
+    "@mui/material": "^5.6.3",
+    "axios": "^0.27.2",
+    "bootstrap": "^5.1.3",
+    "dexie": "^3.2.2",
+    "es6-module-loader": "^0.17.11",
+    "jquery": "^3.6.0",
+    "json-server": "^0.17.0",
+    "react-detect-offline": "^2.4.5",
+    "traceur": "^0.0.111"
+  },
+  "devDependencies": {
+    "buffer": "^6.0.3",
+    "lite-server": "^2.6.1",
+    "parcel": "^2.5.0",
+    "process": "^0.11.10",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-router-dom": "^6.3.0"
+  }
+}
