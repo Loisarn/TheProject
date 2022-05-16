@@ -1,15 +1,6 @@
 import React from 'react';
 import '../app.css';
 
-// export default function SignIn() {
-//     return (
-//         <>
-//         <h1 className="signup">Prototyp Floppy</h1>
-//         </>
-//     );
-// }
-
-
 export default class SignIn extends React.Component {
     state = {
         user: '',
