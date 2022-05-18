@@ -5,16 +5,14 @@
       "what": "Bytt bromsar",
       "cost": "1500kr",
       "model": "Svart Honda",
-      "regNum": "OOA581",
-      "link": "https:/localhost:1234"
+      "regnum": "OOA581"
     },
     {
       "id": 3,
       "what": "Oljebyte",
       "cost": "2000kr",
       "model": "Vit BMW",
-      "regNum": "LXB042",
-      "link": "https:/localhost:1234"
+      "regnum": "LXB042"
     }
   ],
   "houses": [
@@ -29,6 +27,12 @@
       "what": "Nya vitvaror",
       "cost": "20 000kr",
       "room": "Köket"
+    }
+  ],
+  "users": [
+    {
+      "username": "Admin",
+      "password": "1234"
     }
   ]
 }

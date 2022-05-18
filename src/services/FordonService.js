@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from '../api/axios.js';
 
 const VEHICLE_API_BASE_URL = "http://localhost:3000/vehicles";
 
@@ -12,16 +12,16 @@ export class FordonService {
         return axios.post(VEHICLE_API_BASE_URL, vehicles);
     }
 
-    getVehicleById(vehicleId) {
-        return axios.get(VEHICLE_API_BASE_URL + '/' + vehicleId);
+    getVehicleById(vehicleid) {
+        return axios.get(VEHICLE_API_BASE_URL + '/' + vehicleid);
     }
 
-    updateVehicle(vehicles, vehicleId) {
-        return axios.put(VEHICLE_API_BASE_URL + '/' + vehicleId, vehicles);
+    updateVehicle(vehicles, vehicleid) {
+        return axios.put(VEHICLE_API_BASE_URL + '/' + vehicleid, vehicles);
     }
 
-    deleteVehicle(vehicleId) {
-        return axios.delete(VEHICLE_API_BASE_URL + '/' + vehicleId)
+    deleteVehicle(vehicleid) {
+        return axios.delete(VEHICLE_API_BASE_URL + '/' + vehicleid)
     }
 }
 

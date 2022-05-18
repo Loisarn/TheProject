@@ -94,7 +94,7 @@ export default class Contact extends React.Component {
               </div>
               <div className="form-group mb-3">
                 <label>
-                  <strong>Kontakt</strong>
+                  <strong>Rubrik</strong>
                 </label>
                 <input
                   type="text"
