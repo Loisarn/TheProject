@@ -1,27 +1,27 @@
 import axios from 'axios';
 
-const HOME_API_BASE_URL = "http://localhost:3000/houses";
+const HOME_BASE_URL = "http://localhost:3000/houses";
 
 export class BostadService {
 
     getHouse() {
-        return axios.get(HOME_API_BASE_URL);
+        return axios.get(HOME_BASE_URL);
     }
 
-    createHouse(houses) {
-        return axios.post(HOME_API_BASE_URL, houses);
+    createHouse(house) {
+        return axios.post(HOME_BASE_URL, house);
     }
 
-    getHouseById(housesId) {
-        return axios.get(HOME_API_BASE_URL + '/' + housesId);
+    getHouseById(houseId) {
+        return axios.get(HOME_BASE_URL + '/' + houseId);
     }
 
-    updateHouse(houses, housesId) {
-        return axios.put(HOME_API_BASE_URL + '/' + housesId, houses);
+    updateHouse(house, houseId) {
+        return axios.put(HOME_BASE_URL + '/' + houseId, house);
     }
 
-    deleteHouse(housesId) {
-        return axios.delete(HOME_API_BASE_URL + '/' + housesId)
+    deleteHouse(houseId) {
+        return axios.delete(HOME_BASE_URL + '/' + houseId)
     }
 }
 

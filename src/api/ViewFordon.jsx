@@ -1,12 +1,18 @@
 import React from "react";
 import FordonService from "../services/FordonService.js";
+import { useParams } from "react-router-dom";
 
-class ViewFordon extends React.Component {
+export default ViewFordon = () => {
+  const params = useParams();
+  return <ViewFordonPage params={params} />;
+};
+
+class ViewFordonPage extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      vehicleid: 2,
+      vehicleid: this.props.params.id,
       vehicles: {},
     };
   }
@@ -37,7 +43,7 @@ class ViewFordon extends React.Component {
             </div>
             <div className="row">
               <label>Registreringsnummer</label>
-              <div> {this.state.vehicles.regNum}</div>
+              <div> {this.state.vehicles.regnum}</div>
             </div>
           </div>
         </div>
@@ -45,5 +51,3 @@ class ViewFordon extends React.Component {
     );
   }
 }
-
-export default ViewFordon;

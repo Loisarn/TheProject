@@ -9,16 +9,8 @@
     --primary: #1888ff;
 }
 
-.btn {
-    padding: 8px 20px;
-    border-radius: 4px;
-    outline: none;
-    border: none;
-    font-size: 18px;
-    color: #fff;
-    cursor: pointer;
-    background-color: var(--primary);
-}
+/* NAVBAR */
+
 
 .btn:hover{
     padding: 6px 18px;
@@ -202,44 +194,9 @@
       color: #1888ff;
       transition: 250ms;
     }
-  
-    button {
-      display: none;
-    }
   }
 
-  form {
-    border: 3px solid #f1f1f1;
-    margin: 5px;
-    padding: 5px;
-    background: rgba(255, 255, 255, 0.25);
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
-    width: auto;
-  }
-  
-  input {
-    width: auto;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-    font-size: 15px;
-  }
-  
-  button {
-    background-color: var(--primary);
-    color: white;
-    padding: 10px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: auto;
-  }
-
-  button:hover {
-    opacity: 0.8;
-  }
+  /* SEARCHBAR */
 
   .searchInputs {
     margin: 10px;
@@ -325,24 +282,6 @@
     display: inline-block;
   }
 
-  .submitbtn {
-    background-color: primary;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-
-input[type=text], select, textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  resize: vertical;
-}
-
 h1 {
   text-align: center;
   color: black;
@@ -354,48 +293,8 @@ html {
   color: #fff;
 }
 
-section {
-  width: 100%;
-  max-width: 420px;
-  min-height: 400px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  padding: 1rem;
-  background-color: rgba(0,0,0,0.4);
-  margin: 50px;
-  
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  flex-grow: 1;
-  padding-bottom: 1rem;
-}
-
-link, link:visited {
+Link, Link:visited {
   color: #fff;
-}
-
-input[type="text"],
-input[type="password"],
-button,
-textarea {
-font-family: 'Nunito', sans-serif;
-font-size: 22px;
-padding: 0.25rem;
-border-radius: 0.5rem;
-}
-
-label,
-button {
-margin-top: 1rem;
-}
-
-button {
-padding: 0.5rem;
 }
 
 .instructions {
@@ -473,4 +372,102 @@ h2 {
 
 .icon {
   color: blue;
+}
+
+/* LOGIN */
+
+.wrapper {
+  max-width: 350px;
+  min-height: 500px;
+  margin: 80px auto;
+  padding: 40px 30px 30px 30px;
+  background-color: #ecf0f3;
+  border-radius: 15px;
+  box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff;
+}
+
+.wrapper .name {
+  font-weight: 600;
+  font-size: 1.4rem;
+  letter-spacing: 1.3px;
+  padding-left: 10px;
+  color: #555;
+}
+
+.wrapper .form-field input {
+  width: 100%;
+  display: block;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1.2rem;
+  color: #666;
+  padding: 10px 15px 10px 10px;
+}
+.wrapper .form-field {
+  padding-left: 10px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #fff;
+}
+
+.wrapper .form-field .fas {
+  color: #555;
+}
+
+.wrapper .btn {
+  box-shadow: none;
+  width: 100%;
+  height: 40px;
+  background-color: #03A9F4;
+  color: #fff;
+  border-radius: 25px;
+  box-shadow: 3px 3px 3px #b1b1b1, -3px -3px 3px #fff;
+  letter-spacing: 1.3px;
+  text-align: center;
+}
+
+.wrapper .btn:hover {
+  background-color: #039BE5;
+}
+
+.wrapper Link {
+  text-decoration: none;
+  font-size: 0.8rem;
+  color: #03A9F4;
+}
+
+.wrapper Link:hover {
+  color: #039BE5;
+}
+
+@media(max-width: 380px) {
+  .wrapper {
+    margin: 30px 20px;
+    padding: 40px 15px 15px 15px;
+  }
+}
+
+.formList {
+  max-width: auto;
+  min-height: 500px;
+  margin: 80px auto;
+  padding: 40px 30px 30px 30px;
+  background-color: #ecf0f3;
+  border-radius: 15px;
+  box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff;
+}
+
+.formList .btn {
+  box-shadow: none;
+  width: 30%;
+  height: 35px;
+  background-color: #03A9F4;
+  color: #fff;
+  border-radius: 20px;
+  box-shadow: 3px 3px 3px #b1b1b1, -3px -3px 3px #fff;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  text-align: center;
+  display: inline-block;
 }

@@ -22,13 +22,16 @@ import FooterComponent from "./components/FooterComponent.js";
 import Contact from "./components/Contacts.jsx";
 import { db as data } from "../../data/db.json";
 import FordonList from "../api/FordonList.jsx";
-import Layout from "./components/Layout.js";
+import ReceiptList from "../api/ReceiptList.jsx";
 import Unauthorized from "./components/Unauthorized.js";
 import ViewFordon from "../api/ViewFordon.jsx";
 import CreateFordon from "../api/CreateFordon.jsx";
-import EditFordon from "../api/EditFordon.js";
+import CreateBostad from "../api/CreateBostad.jsx";
+import UpdateFordon from "../api/UpdateFordon.jsx";
+import UpdateBostad from "../api/UpdateBostad.jsx";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ErrorBoundary from "./components/ErrorBoundary";
+import CreateReceipt from "../api/CreateReceipt";
 
 function App() {
   return (
@@ -36,7 +39,6 @@ function App() {
       <Navbar />
       <SearchBar placeholder="Search" data={data} />
       <Routes>
-        {/* <Route patch="/" element={<Layout />} /> */}
         {/*public routes */}
         <Route path="/signup" element={<Login />} />
         <Route path="/register" element={<Register />} />
@@ -52,8 +54,12 @@ function App() {
         <Route path="/receipt" element={<Receipt />} />
         <Route path="/vehicles" element={<FordonList />} />
         <Route path="/view-vehicles/:id" element={<ViewFordon />} />
-        {<Route path="/add-vehicles/_add" element={<CreateFordon />} />}
-        {<Route path="/add-vehicles/:id" element={<EditFordon />} />}
+        <Route path="/add-vehicles" element={<CreateFordon />} />
+        <Route path="/update-vehicles/:id" element={<UpdateFordon />} />
+        <Route path="/add-house" element={<CreateBostad />} />
+        <Route path="/add-house/:id" element={<UpdateBostad />} />
+        <Route path="/add-receipts" element={<CreateReceipt />} />
+        <Route path="/receipts" element={<ReceiptList />} />
         {/* </Route> */}
       </Routes>
       <FooterComponent />

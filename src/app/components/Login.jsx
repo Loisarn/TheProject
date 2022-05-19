@@ -2,6 +2,7 @@ import React, { useRef, useState, useEffect } from "react";
 import useAuth from "../hooks/useAuth.js";
 import axios from "axios";
 import { Link, useNavigate, useLocation } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const LOGIN_URL = "localhost:3000/users";
 
@@ -61,7 +62,7 @@ const Login = () => {
   };
 
   return (
-    <section>
+    <div>
       <p
         ref={errRef}
         className={errMsg ? "errmsg" : "offscreen"}
@@ -69,38 +70,47 @@ const Login = () => {
       >
         {errMsg}
       </p>
-      <h1>Logga in</h1>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="username">Användarnamn:</label>
-        <input
-          type="text"
-          id="username"
-          ref={userRef}
-          autoComplete="off"
-          onChange={(e) => setUser(e.target.value)}
-          value={user}
-          required
-        />
-
-        <label htmlFor="password">Lösenord:</label>
-        <input
-          type="password"
-          id="password"
-          onChange={(e) => setPwd(e.target.value)}
-          value={pwd}
-          required
-        />
-        <br></br>
-        <button className="btn btn-primary">Logga in</button>
-      </form>
-      <p>
-        Need an Account?
-        <br />
-        <span className="line">
-          <Link to="/register">Registrera dig</Link>
-        </span>
-      </p>
-    </section>
+      <div className="text-center mt-4 name">Logga in </div>
+      <div className="wrapper">
+        <form className="p-3 mt-3" onSubmit={handleSubmit}>
+          <div className="form-field d-flex align-items-center">
+            <span className="far fa-user"></span>
+            <input
+              type="text"
+              placeholder="Användarnamn"
+              id="username"
+              ref={userRef}
+              autoComplete="off"
+              onChange={(e) => setUser(e.target.value)}
+              value={user}
+              required
+            />
+          </div>
+          <div className="form-field d-flex align-items-center">
+            <span className="fas fa-key"></span>
+            <input
+              type="password"
+              placeholder="Lösenord"
+              id="password"
+              onChange={(e) => setPwd(e.target.value)}
+              value={pwd}
+              required
+            />
+          </div>
+          <br></br>
+          <button className="btn mt-3">Logga in</button>
+        </form>
+        <div className="text-center fs-6">
+          <p>
+            Har du inget konto?
+            <br />
+            <span className="line">
+              <Link to="/register">Registrera dig</Link>
+            </span>
+          </p>
+        </div>
+      </div>
+    </div>
   );
 };
 

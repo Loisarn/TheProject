@@ -35,23 +35,21 @@ class BostadList extends React.Component {
   }
 
   createHouse() {
-    this.props.navigate("/create-house/");
+    this.props.navigate("/add-house");
   }
 
   render() {
     return (
-      <div className="fordonlist">
+      <div className="formList">
         <h2 className="text-center">Lista över Bostäder</h2>
         <div className="row">
-          <button className="btn btn-primary" onClick={this.createHouse}>
-            Lägg till
-          </button>
         </div>
         <br></br>
         <div className="row">
           <table className="table table-striped table-bordered">
             <thead>
               <tr>
+              <th>Adress</th>
                 <th>Vad</th>
                 <th>Kostnad</th>
                 <th>Rum</th>
@@ -60,6 +58,7 @@ class BostadList extends React.Component {
             <tbody>
               {this.state.houses.map((houses) => (
                 <tr key={houses.id}>
+                  <td> {houses.place} </td>
                   <td> {houses.what} </td>
                   <td> {houses.cost} </td>
                   <td> {houses.room} </td>
@@ -72,23 +71,26 @@ class BostadList extends React.Component {
                     </button>
                     <button
                       style={{ marginLeft: "10px" }}
+                      onClick={() => this.viewHouse(houses.id)}
+                      className="btn btn-info"
+                    >
+                      Detaljer
+                    </button>
+                    <button
+                      style={{ marginLeft: "10px" }}
                       onClick={() => this.deleteHouse(houses.id)}
                       className="btn btn-danger"
                     >
                       Radera
-                    </button>
-                    <button
-                      style={{ marginLeft: "10px" }}
-                      onClick={() => this.viewHouse(houses.id)}
-                      className="btn btn-info"
-                    >
-                      View
                     </button>
                   </td>
                 </tr>
               ))}
             </tbody>
           </table>
+          <button className="btn btn-primary" onClick={this.createHouse}>
+            Lägg till
+          </button>
         </div>
       </div>
     );

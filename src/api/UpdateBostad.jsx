@@ -1,53 +1,50 @@
-import React from "react";
-import FordonService from "../services/FordonService";
-import { Link } from "react-router-dom";
+import React, { Component } from "react";
+import { useParams } from "react-router-dom";
+import BostadService from "../services/BostadService";
 
-class CreateFordon extends React.Component {
+export default UpdateBostad = () => {
+  const params = useParams();
+  return <UpdateBostadPage params={params} />;
+};
+
+class UpdateBostadPage extends Component {
   constructor(props) {
     super(props);
-
+    console.log(props);
     this.state = {
+      id: this.props.params.id,
       what: "",
       cost: "",
-      model: "",
-      regnum: "",
+      room: "",
     };
 
     this.changeWhatHandler = this.changeWhatHandler.bind(this);
     this.changeCostHandler = this.changeCostHandler.bind(this);
-    this.changeModelHandler = this.changeModelHandler.bind(this);
-    this.changeRegNumHandler = this.changeRegNumHandler.bind(this);
-    this.saveVehicle = this.saveVehicle.bind(this);
+    this.changeRoomHandler = this.changeRoomHandler.bind(this);
+    this.updateHouse = this.updateHouse.bind(this);
   }
 
   componentDidMount() {
-    if (this.state.id === "_add") {
-      return;
-    } else {
-      FordonService.getVehicleById(this.state.id).then((res) => {
-        const vehicle = res.data;
-        this.setState({
-          what: vehicle.what,
-          cost: vehicle.cost,
-          model: vehicle.model,
-          regnum: vehicle.regnum,
-        });
+    BostadService.getHouseById(this.state.id).then((res) => {
+      const house = res.data;
+      this.setState({
+        what: house.what,
+        cost: house.cost,
+        room: house.room,
       });
-    }
+    });
   }
 
-  saveVehicle = (e) => {
+  updateHouse = (e) => {
     e.preventDefault();
-    const vehicle = {
+    const house = {
       what: this.state.what,
       cost: this.state.cost,
-      model: this.state.model,
-      regnum: this.state.regnum,
+      room: this.state.room,
     };
-    console.log("vehicle => " + JSON.stringify(vehicle));
-
-    FordonService.addVehicle(vehicle).then((res) => {
-      this.props.navigate("/vehicles");
+    console.log("house => " + JSON.stringify(house));
+    BostadService.updateHouse(house, this.state.id).then((res) => {
+      this.props.navigate("/houses");
     });
   };
 
@@ -59,16 +56,12 @@ class CreateFordon extends React.Component {
     this.setState({ cost: event.target.value });
   };
 
-  changeModelHandler = (event) => {
+  changeRoomHandler = (event) => {
     this.setState({ model: event.target.value });
   };
 
-  changeRegNumHandler = (event) => {
-    this.setState({ regnum: event.target.value });
-  };
-
   cancel() {
-    this.props.navigate("/vehicles");
+    this.props.navigate("/houses");
   }
 
   render() {
@@ -101,27 +94,17 @@ class CreateFordon extends React.Component {
                   />
                 </div>
                 <div className="form-group">
-                  <label>Modell</label>
+                  <label>Rum</label>
                   <input
-                    placeholder="model"
-                    model="model"
+                    placeholder="room"
+                    room="room"
                     className="form-control"
-                    value={this.state.model}
-                    onChange={this.changeModelHandler}
-                  />
-                </div>
-                <div className="form-group">
-                  <label>Registreringsnummer</label>
-                  <input
-                    placeholder="regnum"
-                    regnum="regnum"
-                    className="form-control"
-                    value={this.state.regnum}
-                    onChange={this.changeRegNumHandler}
+                    value={this.state.room}
+                    onChange={this.changeRoomHandler}
                   />
                 </div>
 
-                <button className="btn btn-success" onClick={this.saveVehicle}>
+                <button className="btn btn-success" onClick={this.updateHouse}>
                   Spara
                 </button>
                 <button
@@ -139,5 +122,3 @@ class CreateFordon extends React.Component {
     );
   }
 }
-
-export default CreateFordon;

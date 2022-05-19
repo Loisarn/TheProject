@@ -60,13 +60,13 @@ export default class Contact extends React.Component {
     }
   }
 
-  componentWillUpdate(nextProps, nextState) {
+  UNSAFE_componentWillUpdate(nextProps, nextState) {
     localStorage.setItem("contact", JSON.stringify(nextState));
   }
 
   render() {
     return (
-      <div className="container">
+      <div className="wrapper">
         <div className="card">
           <div className="card-body">
             <form onSubmit={this.onFormSubmit}>

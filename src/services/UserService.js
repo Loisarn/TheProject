@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const USER_API_BASE_URL = "http://localhost:1234/users";
+const USER_API_BASE_URL = "http://localhost:3000/users";
 
 export class UserService {
 

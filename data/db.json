@@ -1,11 +1,11 @@
 {
   "vehicles": [
     {
-      "id": 2,
       "what": "Bytt bromsar",
       "cost": "1500kr",
       "model": "Svart Honda",
-      "regnum": "OOA581"
+      "regnum": "OOA582",
+      "id": 2
     },
     {
       "id": 3,
@@ -13,17 +13,26 @@
       "cost": "2000kr",
       "model": "Vit BMW",
       "regnum": "LXB042"
+    },
+    {
+      "what": "Ny växellåda",
+      "cost": "1500",
+      "model": "BMW",
+      "regnum": "OOA581",
+      "id": 4
     }
   ],
   "houses": [
     {
       "id": 1,
-      "what": "Målat väggarna",
-      "cost": "800kr",
+      "place": "Sommarstigen 1",
+      "what": "Målat väggen",
+      "cost": "300",
       "room": "Vardagsrum"
     },
     {
       "id": 2,
+      "place": "Smultronvägen 2",
       "what": "Nya vitvaror",
       "cost": "20 000kr",
       "room": "Köket"
@@ -33,6 +42,13 @@
     {
       "username": "Admin",
       "password": "1234"
+    }
+  ],
+  "receipts": [
+    {
+      "what": "Motorolja",
+      "cost": "200kr",
+      "date": "24 Maj"
     }
   ]
 }

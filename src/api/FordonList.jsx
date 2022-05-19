@@ -9,9 +9,9 @@ class FordonList extends React.Component {
     super(props);
 
     this.state = {
-      vehicles: [],
+      vehicle: [],
     };
-    this.createVehicle = this.createVehicle.bind(this);
+    this.addVehicle = this.addVehicle.bind(this);
     this.editVehicle = this.editVehicle.bind(this);
     this.deleteVehicle = this.deleteVehicle.bind(this);
   }
@@ -19,7 +19,7 @@ class FordonList extends React.Component {
   deleteVehicle(id) {
     FordonService.deleteVehicle(id).then((res) => {
       this.setState({
-        vehicles: this.state.vehicles.filter((vehicles) => vehicles.id !== id),
+        vehicle: this.state.vehicle.filter((vehicle) => vehicle.id !== id),
       });
     });
   }
@@ -28,31 +28,24 @@ class FordonList extends React.Component {
     this.props.navigate(`/view-vehicles/${id}`);
   }
   editVehicle(id) {
-    this.props.navigate(`/add-vehicles/${id}`);
+    this.props.navigate(`/update-vehicles/${id}`);
   }
 
   componentDidMount() {
     FordonService.getVehicle().then((res) => {
-      this.setState({ vehicles: res.data });
+      this.setState({ vehicle: res.data });
     });
   }
 
-  createVehicle(vehicles) {
-    this.props.navigate("/add-vehicles/_add");
+  addVehicle() {
+    this.props.navigate("/add-vehicles");
   }
 
   render() {
     return (
-      <div className="fordonlist">
+      <div className="formList">
         <h2 className="text-center">Lista över Fordon</h2>
-        <div className="row">
-          <Link className="btn btn-primary" to="/add-vehicles/_add">
-            Lägg till
-          </Link>
-          {/* <button className="btn btn-primary" onClick={this.createVehicle}>
-            Lägg till
-          </button> */}
-        </div>
+        <div className="row"></div>
         <br></br>
         <div className="row">
           <table className="table table-striped table-bordered">
@@ -65,38 +58,41 @@ class FordonList extends React.Component {
               </tr>
             </thead>
             <tbody>
-              {this.state.vehicles.map((vehicles) => (
-                <tr key={vehicles.id}>
-                  <td> {vehicles.what} </td>
-                  <td> {vehicles.cost} </td>
-                  <td> {vehicles.model} </td>
-                  <td> {vehicles.regnum} </td>
+              {this.state.vehicle.map((vehicle) => (
+                <tr key={vehicle.id}>
+                  <td> {vehicle.what} </td>
+                  <td> {vehicle.cost} </td>
+                  <td> {vehicle.model} </td>
+                  <td> {vehicle.regnum} </td>
                   <td>
                     <button
-                      onClick={() => this.editVehicle(vehicles.id)}
+                      onClick={() => this.editVehicle(vehicle.id)}
                       className="btn btn-info"
                     >
                       Uppdatera
                     </button>
                     <button
                       style={{ marginLeft: "10px" }}
-                      onClick={() => this.deleteVehicle(vehicles.id)}
-                      className="btn btn-danger"
+                      onClick={() => this.viewVehicle(vehicle.id)}
+                      className="btn btn-info"
                     >
-                      Radera
+                      Detaljer
                     </button>
                     <button
                       style={{ marginLeft: "10px" }}
-                      onClick={() => this.viewVehicle(vehicles.id)}
-                      className="btn btn-info"
+                      onClick={() => this.deleteVehicle(vehicle.id)}
+                      className="btn btn-danger"
                     >
-                      View
+                      Radera
                     </button>
                   </td>
                 </tr>
               ))}
             </tbody>
           </table>
+          <button className="btn mt-3" onClick={this.addVehicle}>
+            Lägg till
+          </button>
         </div>
       </div>
     );

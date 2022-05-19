@@ -1,54 +1,60 @@
 import React from "react";
-import FordonService from "../services/FordonService";
-import { Link } from "react-router-dom";
+import ReceiptService from "../services/ReceiptService.js";
 
-class CreateFordon extends React.Component {
+export class CreateReceipt extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
       what: "",
       cost: "",
-      model: "",
-      regnum: "",
+      date: "",
     };
-
     this.changeWhatHandler = this.changeWhatHandler.bind(this);
     this.changeCostHandler = this.changeCostHandler.bind(this);
-    this.changeModelHandler = this.changeModelHandler.bind(this);
-    this.changeRegNumHandler = this.changeRegNumHandler.bind(this);
-    this.saveVehicle = this.saveVehicle.bind(this);
+    this.changeRoomHandler = this.changeRoomHandler.bind(this);
+    this.saveReceipt = this.saveReceipt.bind(this);
   }
 
   componentDidMount() {
     if (this.state.id === "_add") {
       return;
     } else {
-      FordonService.getVehicleById(this.state.id).then((res) => {
-        const vehicle = res.data;
+      ReceiptService.getReceiptById(this.state.id).then((res) => {
+        let houses = res.data;
         this.setState({
-          what: vehicle.what,
-          cost: vehicle.cost,
-          model: vehicle.model,
-          regnum: vehicle.regnum,
+          what: receipt.what,
+          cost: receipt.cost,
+          room: receipt.room,
+          id: receipt.id,
         });
       });
     }
   }
 
-  saveVehicle = (e) => {
+  saveReceipt = (e) => {
     e.preventDefault();
-    const vehicle = {
+    let receipt = {
       what: this.state.what,
       cost: this.state.cost,
-      model: this.state.model,
-      regnum: this.state.regnum,
+      date: this.state.date,
     };
-    console.log("vehicle => " + JSON.stringify(vehicle));
 
-    FordonService.addVehicle(vehicle).then((res) => {
-      this.props.navigate("/vehicles");
+    console.log("receipt => " + JSON.stringify(receipt));
+
+    ReceiptService.createReceipt(receipt).then((res) => {
+      this.setState({ receipt: res.data });
     });
+
+    if (this.state.id === "_add") {
+      ReceiptService.createReceipt(receipt).then((res) => {
+        this.props.navigate("/receipts");
+      });
+    } else {
+      ReceiptService.updateReceipt(receipt, this.state.id).then((res) => {
+        this.props.navigate("/receipts");
+      });
+    }
   };
 
   changeWhatHandler = (event) => {
@@ -59,16 +65,12 @@ class CreateFordon extends React.Component {
     this.setState({ cost: event.target.value });
   };
 
-  changeModelHandler = (event) => {
-    this.setState({ model: event.target.value });
-  };
-
-  changeRegNumHandler = (event) => {
-    this.setState({ regnum: event.target.value });
+  changeDateHandler = (event) => {
+    this.setState({ room: event.target.value });
   };
 
   cancel() {
-    this.props.navigate("/vehicles");
+    this.props.navigate("/receipts");
   }
 
   render() {
@@ -77,7 +79,6 @@ class CreateFordon extends React.Component {
         <br></br>
         <div className="container">
           <div className="card col-md-6 offset-md-3 offset-md-3">
-            <h3 className="text-center">Lägg till</h3>
             <div className="card-body">
               <form>
                 <div className="form-group">
@@ -101,27 +102,17 @@ class CreateFordon extends React.Component {
                   />
                 </div>
                 <div className="form-group">
-                  <label>Modell</label>
+                  <label>Datum</label>
                   <input
-                    placeholder="model"
-                    model="model"
+                    placeholder="datum"
+                    date="date"
                     className="form-control"
-                    value={this.state.model}
-                    onChange={this.changeModelHandler}
-                  />
-                </div>
-                <div className="form-group">
-                  <label>Registreringsnummer</label>
-                  <input
-                    placeholder="regnum"
-                    regnum="regnum"
-                    className="form-control"
-                    value={this.state.regnum}
-                    onChange={this.changeRegNumHandler}
+                    value={this.state.date}
+                    onChange={this.changeDateHandler}
                   />
                 </div>
 
-                <button className="btn btn-success" onClick={this.saveVehicle}>
+                <button className="btn btn-success" onClick={this.saveReceipt}>
                   Spara
                 </button>
                 <button
@@ -139,5 +130,3 @@ class CreateFordon extends React.Component {
     );
   }
 }
-
-export default CreateFordon;

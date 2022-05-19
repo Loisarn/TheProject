@@ -1,12 +1,18 @@
-import React from "react";
+import React, { Component } from "react";
+import { useParams } from "react-router-dom";
 import FordonService from "../services/FordonService";
-import { Link } from "react-router-dom";
 
-class CreateFordon extends React.Component {
+export default UpdateFordon = () => {
+  const params = useParams();
+  return <UpdateFordonPage params={params} />;
+};
+
+class UpdateFordonPage extends Component {
   constructor(props) {
     super(props);
-
+    console.log(props);
     this.state = {
+      id: this.props.params.id,
       what: "",
       cost: "",
       model: "",
@@ -17,26 +23,22 @@ class CreateFordon extends React.Component {
     this.changeCostHandler = this.changeCostHandler.bind(this);
     this.changeModelHandler = this.changeModelHandler.bind(this);
     this.changeRegNumHandler = this.changeRegNumHandler.bind(this);
-    this.saveVehicle = this.saveVehicle.bind(this);
+    this.updateVehicle = this.updateVehicle.bind(this);
   }
 
   componentDidMount() {
-    if (this.state.id === "_add") {
-      return;
-    } else {
-      FordonService.getVehicleById(this.state.id).then((res) => {
-        const vehicle = res.data;
-        this.setState({
-          what: vehicle.what,
-          cost: vehicle.cost,
-          model: vehicle.model,
-          regnum: vehicle.regnum,
-        });
+    FordonService.getVehicleById(this.state.id).then((res) => {
+      const vehicle = res.data;
+      this.setState({
+        what: vehicle.what,
+        cost: vehicle.cost,
+        model: vehicle.model,
+        regnum: vehicle.regnum,
       });
-    }
+    });
   }
 
-  saveVehicle = (e) => {
+  updateVehicle = (e) => {
     e.preventDefault();
     const vehicle = {
       what: this.state.what,
@@ -45,11 +47,14 @@ class CreateFordon extends React.Component {
       regnum: this.state.regnum,
     };
     console.log("vehicle => " + JSON.stringify(vehicle));
-
-    FordonService.addVehicle(vehicle).then((res) => {
+    FordonService.updateVehicle(vehicle, this.state.id).then((res) => {
       this.props.navigate("/vehicles");
     });
   };
+
+  // FordonService.createVehicle(vehicles).then((res) => {
+  //   this.setState({ vehicles: res.data });
+  // });
 
   changeWhatHandler = (event) => {
     this.setState({ what: event.target.value });
@@ -121,7 +126,10 @@ class CreateFordon extends React.Component {
                   />
                 </div>
 
-                <button className="btn btn-success" onClick={this.saveVehicle}>
+                <button
+                  className="btn btn-success"
+                  onClick={this.updateVehicle}
+                >
                   Spara
                 </button>
                 <button
@@ -139,5 +147,3 @@ class CreateFordon extends React.Component {
     );
   }
 }
-
-export default CreateFordon;
