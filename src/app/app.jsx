@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactDOM from "react-dom/client";
 import Navbar from "./components/navbar.jsx";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
@@ -27,36 +27,51 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import CreateReceipt from "../api/CreateReceipt.jsx";
 import ErrorBoundary from "./components/ErrorBoundary.js";
 
-function App() {
+export const ThemeContext = React.createContext();
+
+export default function App() {
+  const [darkTheme, setDarkTheme] = useState(true);
+
+  function toggleTheme() {
+    setDarkTheme((prevDarkTheme) => !prevDarkTheme);
+  }
+
   return (
     <Router>
       <Navbar />
-      <SearchBar placeholder="Search" />
-      <Routes>
-        {/*public routes */}
-        <Route path="/signup" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/unauthorized" element={<Unauthorized />} />
-        {/*protected routes*/}
-        {/* <Route element={<RequireAuth />}> */}
-        <Route path="/renovering" element={<Renovering />} />
-        <Route path="/cost" element={<Kostnad />} />
-        <Route path="/house" element={<House />} />
-        <Route path="/car" element={<Car />} />
-        <Route path="/receipt" element={<Receipt />} />
-        <Route path="/vehicles" element={<FordonList />} />
-        <Route path="/view-vehicles/:id" element={<ViewFordon />} />
-        <Route path="/add-vehicles" element={<CreateFordon />} />
-        <Route path="/update-vehicles/:id" element={<UpdateFordon />} />
-        <Route path="/add-house" element={<CreateBostad />} />
-        <Route path="/add-house/:id" element={<UpdateBostad />} />
-        <Route path="/add-receipts" element={<CreateReceipt />} />
-        <Route path="/receipts" element={<ReceiptList />} />
-        {/* </Route> */}
-      </Routes>
-      <FooterComponent />
+      <ThemeContext.Provider value={darkTheme}>
+        <div style={{ float: "right" }}>
+          <button className="toggle" onClick={toggleTheme}>
+            Toggle
+          </button>
+        </div>
+        <SearchBar placeholder="Search" />
+        <Routes>
+          {/*public routes */}
+          <Route path="/signup" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/unauthorized" element={<Unauthorized />} />
+          {/*protected routes*/}
+          {/* <Route element={<RequireAuth />}> */}
+          <Route path="/renovering" element={<Renovering />} />
+          <Route path="/cost" element={<Kostnad />} />
+          <Route path="/house" element={<House />} />
+          <Route path="/car" element={<Car />} />
+          <Route path="/receipt" element={<Receipt />} />
+          <Route path="/vehicles" element={<FordonList />} />
+          <Route path="/view-vehicles/:id" element={<ViewFordon />} />
+          <Route path="/add-vehicles" element={<CreateFordon />} />
+          <Route path="/update-vehicles/:id" element={<UpdateFordon />} />
+          <Route path="/add-house" element={<CreateBostad />} />
+          <Route path="/add-house/:id" element={<UpdateBostad />} />
+          <Route path="/add-receipts" element={<CreateReceipt />} />
+          <Route path="/receipts" element={<ReceiptList />} />
+          {/* </Route> */}
+        </Routes>
+        <FooterComponent />
+      </ThemeContext.Provider>
     </Router>
   );
 }
