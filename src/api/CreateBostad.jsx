@@ -1,7 +1,8 @@
 import React from "react";
+import PropTypes from "prop-types";
 import BostadService from "../services/BostadService.js";
 
-export class CreateBostad extends React.Component {
+export default class CreateBostad extends React.Component {
   constructor(props) {
     super(props);
 
@@ -148,3 +149,9 @@ export class CreateBostad extends React.Component {
     );
   }
 }
+
+CreateBostad.propTypes = {
+  place: PropTypes.string,
+  what: PropTypes.string,
+  cost: PropTypes.number,
+};

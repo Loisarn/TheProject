@@ -48,7 +48,8 @@
     {
       "what": "Motorolja",
       "cost": "200kr",
-      "date": "24 Maj"
+      "date": "24 Maj",
+      "id": "1"
     }
   ]
 }

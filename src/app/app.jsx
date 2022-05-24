@@ -1,12 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import Navbar from "./components/navbar.jsx";
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-  IndexRoute,
-} from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./app.css";
 import Home from "./pages/Hem.js";
 import Renovering from "./pages/Renovering.js";
@@ -16,11 +11,10 @@ import House from "./components/House.jsx";
 import Receipt from "./components/Receipt.jsx";
 import SearchBar from "./components/Searchbar.jsx";
 import Login from "./components/Login.jsx";
-import { AuthProvider } from "../context/AuthProvider.js";
+import AuthProvider from "../context/AuthProvider.js";
 import Register from "./components/Register.jsx";
-import FooterComponent from "./components/FooterComponent.js";
+import FooterComponent from "./components/FooterComponent.jsx";
 import Contact from "./components/Contacts.jsx";
-import { db as data } from "../../data/db.json";
 import FordonList from "../api/FordonList.jsx";
 import ReceiptList from "../api/ReceiptList.jsx";
 import Unauthorized from "./components/Unauthorized.js";
@@ -30,21 +24,21 @@ import CreateBostad from "../api/CreateBostad.jsx";
 import UpdateFordon from "../api/UpdateFordon.jsx";
 import UpdateBostad from "../api/UpdateBostad.jsx";
 import "bootstrap/dist/css/bootstrap.min.css";
-import ErrorBoundary from "./components/ErrorBoundary";
-import CreateReceipt from "../api/CreateReceipt";
+import CreateReceipt from "../api/CreateReceipt.jsx";
+import ErrorBoundary from "./components/ErrorBoundary.js";
 
 function App() {
   return (
     <Router>
       <Navbar />
-      <SearchBar placeholder="Search" data={data} />
+      <SearchBar placeholder="Search" />
       <Routes>
         {/*public routes */}
         <Route path="/signup" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/home" element={<Home />} />
-        <Route path="unauthorized" element={<Unauthorized />} />
+        <Route path="/unauthorized" element={<Unauthorized />} />
         {/*protected routes*/}
         {/* <Route element={<RequireAuth />}> */}
         <Route path="/renovering" element={<Renovering />} />
@@ -67,8 +61,4 @@ function App() {
   );
 }
 
-ReactDOM.createRoot(document.getElementById("root")).render(
-  // <AuthProvider>
-  <App />
-  /* </AuthProvider> */
-);
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);

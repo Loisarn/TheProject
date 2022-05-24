@@ -1,7 +1,7 @@
 import React from "react";
 import ReceiptService from "../services/ReceiptService.js";
 
-export class CreateReceipt extends React.Component {
+export default class CreateReceipt extends React.Component {
   constructor(props) {
     super(props);
 
