@@ -24,11 +24,10 @@
   ],
   "houses": [
     {
-      "id": 1,
-      "place": "Sommarstigen 1",
       "what": "Målat väggen",
       "cost": "300",
-      "room": "Vardagsrum"
+      "room": "Vardagsrum",
+      "id": 1
     },
     {
       "id": 2,

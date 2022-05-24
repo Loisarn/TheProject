@@ -21,6 +21,7 @@ import Unauthorized from "./components/Unauthorized.js";
 import ViewFordon from "../api/ViewFordon.jsx";
 import CreateFordon from "../api/CreateFordon.jsx";
 import CreateBostad from "../api/CreateBostad.jsx";
+import ViewBostad from "../api/ViewBostad.jsx";
 import UpdateFordon from "../api/UpdateFordon.jsx";
 import UpdateBostad from "../api/UpdateBostad.jsx";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -38,40 +39,43 @@ export default function App() {
 
   return (
     <Router>
-      <Navbar />
-      <ThemeContext.Provider value={darkTheme}>
-        <div style={{ float: "right" }}>
-          <button className="toggle" onClick={toggleTheme}>
-            Toggle
-          </button>
-        </div>
-        <SearchBar placeholder="Search" />
-        <Routes>
-          {/*public routes */}
-          <Route path="/signup" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/unauthorized" element={<Unauthorized />} />
-          {/*protected routes*/}
-          {/* <Route element={<RequireAuth />}> */}
-          <Route path="/renovering" element={<Renovering />} />
-          <Route path="/cost" element={<Kostnad />} />
-          <Route path="/house" element={<House />} />
-          <Route path="/car" element={<Car />} />
-          <Route path="/receipt" element={<Receipt />} />
-          <Route path="/vehicles" element={<FordonList />} />
-          <Route path="/view-vehicles/:id" element={<ViewFordon />} />
-          <Route path="/add-vehicles" element={<CreateFordon />} />
-          <Route path="/update-vehicles/:id" element={<UpdateFordon />} />
-          <Route path="/add-house" element={<CreateBostad />} />
-          <Route path="/add-house/:id" element={<UpdateBostad />} />
-          <Route path="/add-receipts" element={<CreateReceipt />} />
-          <Route path="/receipts" element={<ReceiptList />} />
-          {/* </Route> */}
-        </Routes>
-        <FooterComponent />
-      </ThemeContext.Provider>
+      <ErrorBoundary>
+        <Navbar />
+        <ThemeContext.Provider value={darkTheme}>
+          <div style={{ float: "right" }}>
+            <button className="toggle" onClick={toggleTheme}>
+              Toggle
+            </button>
+          </div>
+          <SearchBar placeholder="Search" />
+          <Routes>
+            {/*public routes */}
+            <Route path="/signup" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/unauthorized" element={<Unauthorized />} />
+            {/*protected routes*/}
+            {/* <Route element={<RequireAuth />}> */}
+            <Route path="/renovering" element={<Renovering />} />
+            <Route path="/cost" element={<Kostnad />} />
+            <Route path="/house" element={<House />} />
+            <Route path="/car" element={<Car />} />
+            <Route path="/receipt" element={<Receipt />} />
+            <Route path="/vehicles" element={<FordonList />} />
+            <Route path="/view-vehicles/:id" element={<ViewFordon />} />
+            <Route path="/add-vehicles" element={<CreateFordon />} />
+            <Route path="/update-vehicles/:id" element={<UpdateFordon />} />
+            <Route path="/add-house" element={<CreateBostad />} />
+            <Route path="/add-house/:id" element={<UpdateBostad />} />
+            <Route path="/view-house/:id" element={<ViewBostad />} />
+            <Route path="/add-receipts" element={<CreateReceipt />} />
+            <Route path="/receipts" element={<ReceiptList />} />
+            {/* </Route> */}
+          </Routes>
+          <FooterComponent />
+        </ThemeContext.Provider>
+      </ErrorBoundary>
     </Router>
   );
 }
