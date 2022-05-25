@@ -476,3 +476,7 @@ h2 {
 .toggle {
   justify-content: right;
 }
+
+p {
+  text-align: center;
+}

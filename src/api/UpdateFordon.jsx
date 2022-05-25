@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { useParams } from "react-router-dom";
 import FordonService from "../services/FordonService";
+import PropTypes from "prop-types";
 
 export default UpdateFordon = () => {
   const params = useParams();
@@ -147,3 +148,10 @@ class UpdateFordonPage extends Component {
     );
   }
 }
+
+UpdateFordonPage.propTypes = {
+  model: PropTypes.string,
+  what: PropTypes.string,
+  cost: PropTypes.number,
+  regnum: PropTypes.string,
+};

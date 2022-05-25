@@ -1,6 +1,7 @@
 import React from "react";
 import FordonService from "../services/FordonService";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 class CreateFordon extends React.Component {
   constructor(props) {
@@ -139,5 +140,12 @@ class CreateFordon extends React.Component {
     );
   }
 }
+
+CreateFordon.propTypes = {
+  model: PropTypes.string,
+  what: PropTypes.string,
+  cost: PropTypes.number,
+  regnum: PropTypes.string,
+};
 
 export default CreateFordon;

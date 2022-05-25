@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import ReceiptService from "../services/ReceiptService.js";
 
 export default class CreateReceipt extends React.Component {
@@ -6,7 +7,7 @@ export default class CreateReceipt extends React.Component {
     super(props);
 
     this.state = {
-      what: "",
+      what: "", 
       cost: "",
       date: "",
     };
@@ -130,3 +131,9 @@ export default class CreateReceipt extends React.Component {
     );
   }
 }
+
+CreateReceipt.propTypes = {
+  date: PropTypes.number,
+  what: PropTypes.string,
+  cost: PropTypes.number,
+};

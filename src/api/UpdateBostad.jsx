@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { useParams } from "react-router-dom";
 import BostadService from "../services/BostadService";
+import PropTypes from "prop-types";
 
 export default UpdateBostad = () => {
   const params = useParams();
@@ -122,3 +123,9 @@ class UpdateBostadPage extends Component {
     );
   }
 }
+
+UpdateBostadPage.propTypes = {
+  place: PropTypes.string,
+  what: PropTypes.string,
+  cost: PropTypes.number,
+};
