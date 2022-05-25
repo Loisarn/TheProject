@@ -20,7 +20,7 @@ export default class CreateBostad extends React.Component {
   }
 
   componentDidMount() {
-    if (this.state.id === "_add") {
+    if (this.state.id === "add") {
       return;
     } else {
       BostadService.getHouseById(this.state.id).then((res) => {
@@ -51,7 +51,7 @@ export default class CreateBostad extends React.Component {
       this.setState({ houses: res.data });
     });
 
-    if (this.state.id === "_add") {
+    if (this.state.id === "add") {
       BostadService.createHouse(houses).then((res) => {
         this.props.navigate("/houses");
       });
@@ -67,7 +67,7 @@ export default class CreateBostad extends React.Component {
   };
 
   changePlaceHandler = (event) => {
-    this.setState({ what: event.target.value });
+    this.setState({ place: event.target.value });
   };
 
   changeCostHandler = (event) => {
@@ -93,7 +93,7 @@ export default class CreateBostad extends React.Component {
                 <div className="form-group">
                   <label>Adress</label>
                   <input
-                    placeholder="place"
+                    placeholder="adress"
                     place="place"
                     className="form-control"
                     value={this.state.place}

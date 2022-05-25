@@ -7,13 +7,13 @@ export default class CreateReceipt extends React.Component {
     super(props);
 
     this.state = {
-      what: "", 
+      what: "",
       cost: "",
       date: "",
     };
     this.changeWhatHandler = this.changeWhatHandler.bind(this);
     this.changeCostHandler = this.changeCostHandler.bind(this);
-    this.changeRoomHandler = this.changeRoomHandler.bind(this);
+    this.changeDateHandler = this.changeDateHandler.bind(this);
     this.saveReceipt = this.saveReceipt.bind(this);
   }
 

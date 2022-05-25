@@ -30,6 +30,10 @@ class ViewBostadPage extends React.Component {
           <h3 className="text-center">Detaljer</h3>
           <div className="card-body">
             <div className="row">
+              <label>Adress</label>
+              <div>{this.state.houses.place}</div>
+            </div>
+            <div className="row">
               <label>Vad</label>
               <div>{this.state.houses.what}</div>
             </div>

@@ -14,12 +14,14 @@ class UpdateBostadPage extends Component {
     console.log(props);
     this.state = {
       id: this.props.params.id,
+      place: "",
       what: "",
       cost: "",
       room: "",
     };
 
     this.changeWhatHandler = this.changeWhatHandler.bind(this);
+    this.changePlaceHandler = this.changePlaceHandler.bind(this);
     this.changeCostHandler = this.changeCostHandler.bind(this);
     this.changeRoomHandler = this.changeRoomHandler.bind(this);
     this.updateHouse = this.updateHouse.bind(this);
@@ -30,6 +32,7 @@ class UpdateBostadPage extends Component {
       const house = res.data;
       this.setState({
         what: house.what,
+        place: house.place,
         cost: house.cost,
         room: house.room,
       });
@@ -39,6 +42,7 @@ class UpdateBostadPage extends Component {
   updateHouse = (e) => {
     e.preventDefault();
     const house = {
+      place: this.state.place,
       what: this.state.what,
       cost: this.state.cost,
       room: this.state.room,
@@ -51,6 +55,10 @@ class UpdateBostadPage extends Component {
 
   changeWhatHandler = (event) => {
     this.setState({ what: event.target.value });
+  };
+
+  changePlaceHandler = (event) => {
+    this.setState({ place: event.target.value });
   };
 
   changeCostHandler = (event) => {
@@ -74,6 +82,16 @@ class UpdateBostadPage extends Component {
             <h3 className="text-center">Lägg till</h3>
             <div className="card-body">
               <form>
+                <div className="form-group">
+                  <label>Adress</label>
+                  <input
+                    placeholder="adress"
+                    place="place"
+                    className="form-control"
+                    value={this.state.place}
+                    onChange={this.changePlaceHandler}
+                  />
+                </div>
                 <div className="form-group">
                   <label>Vad</label>
                   <input

@@ -51,10 +51,11 @@ Tredje inlämningen handlar om att interagera med REST-API:et och att dyka ner i
 - Parcel = För att transpilera koden.
 - Lite-server = refreshar sidan när man ändrar något i html eller javascript.
 - bootstrap = För att slippa skriva mycket CSS kod.
+- PropTypes
 
 ## Tjänster
 
-Jag har valt att använda mig av JSON Server och Axios, när det kommer till REST API. Mina anrop görs i mappen som är döpt till api. I den innehåller filer som till exempel "FordonList, CreateFordon och ViewFordon. Just nu funkar bara anropet GET & DELETE, som hämtar/raderar informationen, och dessa anrop kommer från FordonList och BostadList.
+Jag har valt att använda mig av JSON Server och Axios, när det kommer till REST API. Mina anrop görs i mappen som är döpt till api. I den innehåller filer som till exempel "FordonList, CreateFordon och ViewFordon. Här kan man lägga till, radera, uppdatera och kolla Id.
 
 ## Kravlista för källkodsprojektet
 
@@ -62,7 +63,7 @@ Jag har valt att använda mig av JSON Server och Axios, när det kommer till RES
 
 [:heavy_check_mark:] Källkoden ska bestå av minst 15 React komponenter du skrivit själv med hjälp av JSX.
 
-[ ] En av dina React komponenter ska vara en "Error Boundry"-komponent, som används korrekt i komponent-trädet
+[:heavy_check_mark:] En av dina React komponenter ska vara en "Error Boundry"-komponent, som används korrekt i komponent-trädet
 
 [:heavy_check_mark:] Paketet Prop-Types ska vara installerat och användas i applikationen på minst 4 st av dina egna komponenter - välj de mest relevanta.
 

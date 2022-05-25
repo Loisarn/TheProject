@@ -4,7 +4,7 @@
       "what": "Bytt bromsar",
       "cost": "1500kr",
       "model": "Svart Honda",
-      "regnum": "OOA582",
+      "regnum": "OOA581",
       "id": 2
     },
     {
@@ -15,16 +15,17 @@
       "regnum": "LXB042"
     },
     {
-      "what": "Ny växellåda",
+      "what": "Nytt avgasrör",
       "cost": "1500",
-      "model": "BMW",
-      "regnum": "OOA581",
-      "id": 4
+      "model": "VW Polo",
+      "regnum": "EEE223",
+      "id": 5
     }
   ],
   "houses": [
     {
-      "what": "Målat väggen",
+      "place": "Spjutgatan 1",
+      "what": "Målat väggarna",
       "cost": "300",
       "room": "Vardagsrum",
       "id": 1
@@ -35,6 +36,13 @@
       "what": "Nya vitvaror",
       "cost": "20 000kr",
       "room": "Köket"
+    },
+    {
+      "place": "Linkgatan 24",
+      "what": "Bytt fönster",
+      "cost": "12000",
+      "room": "Fasad",
+      "id": 3
     }
   ],
   "users": [

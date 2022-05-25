@@ -22,7 +22,7 @@ class CreateFordon extends React.Component {
   }
 
   componentDidMount() {
-    if (this.state.id === "_add") {
+    if (this.state.id === "add") {
       return;
     } else {
       FordonService.getVehicleById(this.state.id).then((res) => {
