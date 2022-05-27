@@ -450,11 +450,11 @@ h2 {
 
 .formList {
   max-width: auto;
-  min-height: 500px;
-  margin: 80px auto;
-  padding: 40px 30px 30px 30px;
+  min-height: 400px;
+  margin: 70px auto;
+  padding: 30px 20px 20px 20px;
   background-color: #ecf0f3;
-  border-radius: 15px;
+  border-radius: 10px;
   /* box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff; */
 }
 
@@ -479,4 +479,10 @@ h2 {
 
 p {
   text-align: center;
+}
+
+.popupbtn {
+  overflow: auto;
+  height: 100px;
+  margin-right: 20px;
 }

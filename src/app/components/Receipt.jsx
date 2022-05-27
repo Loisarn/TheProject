@@ -3,6 +3,7 @@ import "../app.css";
 import { useNavigate } from "react-router";
 import ReceiptList from "../../api/ReceiptList";
 import { ThemeContext } from "../App";
+import PopupBtn from "./PopupBtn";
 
 export default function Receipt() {
   const navigate = useNavigate();
@@ -17,6 +18,9 @@ export default function Receipt() {
     <>
       <div style={themeStyles}>
         <ReceiptList navigate={navigate} />
+      </div>
+      <div className="help">
+        <PopupBtn />
       </div>
     </>
   );

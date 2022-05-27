@@ -3,6 +3,7 @@ import useAuth from "../hooks/useAuth.js";
 import axios from "axios";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
+import PopupBtn from "./PopupBtn";
 
 const LOGIN_URL = "localhost:3000/users";
 
@@ -109,6 +110,9 @@ const Login = () => {
             </span>
           </p>
         </div>
+      </div>
+      <div className="help">
+        <PopupBtn />
       </div>
     </div>
   );

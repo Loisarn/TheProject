@@ -3,6 +3,7 @@ import { useNavigate } from "react-router";
 import "../app.css";
 import FordonList from "../../api/FordonList.jsx";
 import { ThemeContext } from "../App";
+import PopupBtn from "./PopupBtn";
 
 export default function Car() {
   const navigate = useNavigate();
@@ -17,6 +18,9 @@ export default function Car() {
     <>
       <div style={themeStyles}>
         <FordonList navigate={navigate} />
+      </div>
+      <div className="help">
+        <PopupBtn />
       </div>
     </>
   );

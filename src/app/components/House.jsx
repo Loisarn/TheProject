@@ -3,6 +3,7 @@ import "../app.css";
 import BostadList from "../../api/BostadList.js";
 import { useNavigate } from "react-router";
 import { ThemeContext } from "../App";
+import PopupBtn from "./PopupBtn";
 
 export default function House() {
   const navigate = useNavigate();
@@ -17,6 +18,9 @@ export default function House() {
     <>
       <div style={themeStyles}>
         <BostadList navigate={navigate} />
+      </div>
+      <div className="help">
+        <PopupBtn />
       </div>
     </>
   );
