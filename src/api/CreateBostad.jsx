@@ -91,9 +91,9 @@ export default class CreateBostad extends React.Component {
             <div className="card-body">
               <form>
                 <div className="form-group">
-                  <label>Adress</label>
+                  {/* <label>Adress</label> */}
                   <input
-                    placeholder="adress"
+                    placeholder="Adress"
                     place="place"
                     className="form-control"
                     value={this.state.place}
@@ -101,9 +101,9 @@ export default class CreateBostad extends React.Component {
                   />
                 </div>
                 <div className="form-group">
-                  <label>Vad</label>
+                  {/* <label>Vad</label> */}
                   <input
-                    placeholder="vad"
+                    placeholder="Vad"
                     what="what"
                     className="form-control"
                     value={this.state.what}
@@ -111,9 +111,9 @@ export default class CreateBostad extends React.Component {
                   />
                 </div>
                 <div className="form-group">
-                  <label>Kostnad</label>
+                  {/* <label>Kostnad</label> */}
                   <input
-                    placeholder="kostnad"
+                    placeholder="Kostnad"
                     cost="cost"
                     className="form-control"
                     value={this.state.cost}
@@ -121,10 +121,10 @@ export default class CreateBostad extends React.Component {
                   />
                 </div>
                 <div className="form-group">
-                  <label>Rum</label>
+                  {/* <label>Rum</label> */}
                   <input
-                    placeholder="model"
-                    model="model"
+                    placeholder="Rum"
+                    room="room"
                     className="form-control"
                     value={this.state.room}
                     onChange={this.changeRoomHandler}

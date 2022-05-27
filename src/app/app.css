@@ -486,3 +486,15 @@ p {
   height: 100px;
   margin-right: 20px;
 }
+
+.cardbody, .row {
+  margin-bottom: 20px;
+}
+
+.details {
+  margin-bottom: 100px;
+}
+
+.form-control {
+  margin-bottom: 20px;
+}

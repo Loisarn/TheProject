@@ -25,16 +25,16 @@ class ViewFordonPage extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="details">
         <div className="card col-md-6 offset-md-3">
           <h3 className="text-center">Detaljer</h3>
           <div className="card-body">
             <div className="row">
-              <label>Vad</label>
+              <label>Vad:</label>
               <div>{this.state.vehicles.what}</div>
             </div>
             <div className="row">
-              <label>Kostnad</label>
+              <label>Kostnad:</label>
               <div> {this.state.vehicles.cost}</div>
             </div>
             <div className="row">
@@ -42,7 +42,7 @@ class ViewFordonPage extends React.Component {
               <div> {this.state.vehicles.model}</div>
             </div>
             <div className="row">
-              <label>Registreringsnummer</label>
+              <label>Registreringsnummer:</label>
               <div> {this.state.vehicles.regnum}</div>
             </div>
           </div>

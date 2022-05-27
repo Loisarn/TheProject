@@ -82,9 +82,9 @@ class CreateFordon extends React.Component {
             <div className="card-body">
               <form>
                 <div className="form-group">
-                  <label>Vad</label>
+                  {/* <label>Vad</label> */}
                   <input
-                    placeholder="vad"
+                    placeholder="Vad"
                     what="what"
                     className="form-control"
                     value={this.state.what}
@@ -92,9 +92,9 @@ class CreateFordon extends React.Component {
                   />
                 </div>
                 <div className="form-group">
-                  <label>Kostnad</label>
+                  {/* <label>Kostnad</label> */}
                   <input
-                    placeholder="kostnad"
+                    placeholder="Kostnad"
                     cost="cost"
                     className="form-control"
                     value={this.state.cost}
@@ -102,9 +102,9 @@ class CreateFordon extends React.Component {
                   />
                 </div>
                 <div className="form-group">
-                  <label>Modell</label>
+                  {/* <label>Modell</label> */}
                   <input
-                    placeholder="model"
+                    placeholder="Modell"
                     model="model"
                     className="form-control"
                     value={this.state.model}
@@ -112,9 +112,9 @@ class CreateFordon extends React.Component {
                   />
                 </div>
                 <div className="form-group">
-                  <label>Registreringsnummer</label>
+                  {/* <label>Registreringsnummer</label> */}
                   <input
-                    placeholder="regnum"
+                    placeholder="Regnummer"
                     regnum="regnum"
                     className="form-control"
                     value={this.state.regnum}

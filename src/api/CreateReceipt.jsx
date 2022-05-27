@@ -83,9 +83,9 @@ export default class CreateReceipt extends React.Component {
             <div className="card-body">
               <form>
                 <div className="form-group">
-                  <label>Vad</label>
+                  {/* <label>Vad</label> */}
                   <input
-                    placeholder="vad"
+                    placeholder="Vad"
                     what="what"
                     className="form-control"
                     value={this.state.what}
@@ -93,9 +93,9 @@ export default class CreateReceipt extends React.Component {
                   />
                 </div>
                 <div className="form-group">
-                  <label>Kostnad</label>
+                  {/* <label>Kostnad</label> */}
                   <input
-                    placeholder="kostnad"
+                    placeholder="Kostnad"
                     cost="cost"
                     className="form-control"
                     value={this.state.cost}
@@ -103,9 +103,9 @@ export default class CreateReceipt extends React.Component {
                   />
                 </div>
                 <div className="form-group">
-                  <label>Datum</label>
+                  {/* <label>Datum</label> */}
                   <input
-                    placeholder="datum"
+                    placeholder="Datum"
                     date="date"
                     className="form-control"
                     value={this.state.date}

@@ -4,8 +4,8 @@ Inlämning 1, Moderna Webbapplikationer
 
 ## How to use
 
-För att få programmet att fungera måste man installera node.js, om man inte redan har det installerat. För att sedan kunna köra programmet krävs det att man installerar parcel, react, react-router-dom och JSON Server.
-(exempel: npm install --save-dev parcel, react, react-router-dom, json-server )
+För att få programmet att fungera måste man installera node.js, om man inte redan har det installerat. För att sedan kunna köra programmet krävs det att man installerar parcel, react, react-router-dom, react-router och JSON Server.
+(exempel: npm install --save-dev parcel, react, react-router-dom, react-router, json-server )
 (ett litet tips är att skriva npm install json-server -p 3000 -w data/db.json)
 
 för att starta programmet efter att man har installerat nödvändiga paket skriver man 'npm start' i terminalen. Tryck upp en till terminal och skriv där i 'npm run server' för att starta json-servern, annars får användaren inte ut information på sidan.
@@ -67,7 +67,7 @@ Jag har valt att använda mig av JSON Server och Axios, när det kommer till RES
 
 [:heavy_check_mark:] Paketet Prop-Types ska vara installerat och användas i applikationen på minst 4 st av dina egna komponenter - välj de mest relevanta.
 
-[ ] En av dina nya komponenter ska vara en generellt återanvändningsbar komponent som är enkel att återanvända i en annan applikation med viss avancerad funktionalitet. Komponentens kod ska vara dokumenterad.
+[:heavy_check_mark:] En av dina nya komponenter ska vara en generellt återanvändningsbar komponent som är enkel att återanvända i en annan applikation med viss avancerad funktionalitet. Komponentens kod ska vara dokumenterad.
 
 [:heavy_check_mark:] Antigen Redux eller Reacts Context-API ska användas för att skapa ett gemensamt tillstånd mellan flera olika komponenter oberoende deras placering i React-trädet
 
@@ -79,14 +79,14 @@ Jag har valt att använda mig av JSON Server och Axios, när det kommer till RES
 
 Svara på följande frågor i din inlämnade pdf-fil, varje fråga ska besvaras under sin egna rubrik.
 
-[ ] Rubrik: Min återanvändningsbara komponent
+[:heavy_check_mark:] Rubrik: Min återanvändningsbara komponent
 
 Vilken komponent har du fokuserat på att göra återanvändningsbar? Beskriv och motivera komponentens syfte, beroenden/förutsättningar och vilka på vilket sätt den är återanvändningsbar (minst 2 paragrafer)
 
-[ ] Rubrik: Kodstruktur och felhantering
+[:heavy_check_mark:] Rubrik: Kodstruktur och felhantering
 
 Beskriv och motivera den kodstruktur du använt för att strukturera anrop från din klientapplikation till REST-API:et, har du gjort förbättringar från din förra inlämning beskriv gärna dem. Vilka fel kan tänkas uppstå och hur hanteras fel i förhållande till dina React-komponenter? (ung. 2 till 3 paragrafer)
 
-[ ] Rubrik: Min Error Boundry
+[:heavy_check_mark:] Rubrik: Min Error Boundry
 
 Hur har du designat din Error-boundry komponent? Motivera hur den bidrar med en bättre upplevelse för användaren vid fel - vilka möjliga steg kan användaren ta om Error Boundry komponenten fångar ett fel? (minst 2 paragrafer)

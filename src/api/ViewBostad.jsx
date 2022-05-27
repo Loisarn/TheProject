@@ -18,14 +18,18 @@ class ViewBostadPage extends React.Component {
   }
 
   componentDidMount() {
-    BostadService.getHouseById(this.state.houseid).then((res) => {
-      this.setState({ houses: res.data });
-    });
+    BostadService.getHouseById(this.state.houseid)
+      .then((res) => {
+        this.setState({ houses: res.data });
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   }
 
   render() {
     return (
-      <div>
+      <div className="details">
         <div className="card col-md-6 offset-md-3">
           <h3 className="text-center">Detaljer</h3>
           <div className="card-body">

@@ -31,7 +31,10 @@ class BostadList extends React.Component {
   componentDidMount() {
     BostadService.getHouse().then((res) => {
       this.setState({ houses: res.data });
-    });
+    })
+    .catch(error => {
+      console.log(error);
+    })
   }
 
   createHouse() {
