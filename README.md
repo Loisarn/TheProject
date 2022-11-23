@@ -1,6 +1,6 @@
 # TheProject
 
-Inlämning 1, Moderna Webbapplikationer
+Moderna Webbapplikationer
 
 ## How to use
 
